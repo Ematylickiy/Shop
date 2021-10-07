@@ -1,0 +1,30 @@
+.img-slider{
+    height: 500px;
+    margin: 0 auto
+}
+
+.mac-img {
+    background-image: url('./imgagesSlider/mac.png');
+}
+.imac-test {
+    background-image: url('./imgagesSlider/imacTest.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.watchTest{
+    background-image: url('./imgagesSlider/watchTest.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.iphone{
+    background-image: url('./imgagesSlider/iphone.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.airpods {
+    background-image: url('./imgagesSlider/airpods.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
