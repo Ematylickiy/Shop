@@ -8,7 +8,7 @@
 
 .card {
     min-height: 322px;
-    padding: 23px;
+    padding: 25px 9px;
     margin-top: 70px;
     background-color: rgb(255, 255, 255);
     cursor: pointer;
@@ -44,5 +44,16 @@
     font-size: 44px;
 }
 
-.card-title:hover {
+
+.btn-basket{
+    border: none;
+    outline: none;
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.active{
+    background-color: black;
 }

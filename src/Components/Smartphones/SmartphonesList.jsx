@@ -10,6 +10,7 @@ import { Spinner } from 'react-bootstrap'
 function SmartphonesList() {
 
     const [data, setData] = useState()
+    
 
     useEffect(() => {
         async function getDataAuthor() {
@@ -24,7 +25,7 @@ function SmartphonesList() {
         <div className="container">
             <div className="row">
                 {data ?
-                    data.map(({ id, price, name, img }) => <Smartphone id={id} price={price} name={name} key={id} img={img}/>)
+                    data.map(({ id, price, name, img }) => <Smartphone id={id} price={price} name={name} key={id} img={img} data={data}/>)
                     : <Spinner animation="border" variant="info" />
                 }
             </div>

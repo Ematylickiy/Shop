@@ -36,8 +36,8 @@ body {
 
 
 .btn .badge {
-    top: -12px;
-    left: -27px;
+    top: -10px;
+    left: -28px;
     background-color: #045e7e;
 }
 /* //////////////////////////////////////NavLink///////////////////////////////////////////// */
@@ -66,4 +66,43 @@ body {
 
 .wrapper-nav-links .nav .nav-item {
     border-color: #21a1be;
+}
+
+.wrapper-totalPrice {
+    min-width: 180px;
+    font-size: 20px;
+}
+
+.searchPanel {
+    position: relative;
+    
+}
+
+.searchResults{
+    width: 330px;
+    color: white;
+    position: absolute;
+    top: 68px;
+    z-index: 100;
+}
+
+.searchResults h6 {
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.searchResults h6:hover {
+    text-decoration: underline;
+}
+
+.list-group-item .d-flex {
+    justify-content: space-between;
+}
+
+.list-group-item .d-flex h6 {
+    width: 231px;
+}
+
+.img-search {
+    width: 37px;
 }

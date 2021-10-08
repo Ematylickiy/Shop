@@ -10,7 +10,8 @@
             "frontCamera": "12" ,
             "battery": "3687",
             "RAM": "6",
-            "img": "https://content2.onliner.by/catalog/device/header/08e47b4c1ebc48e8781bc457bde7bdcc.jpeg"
+            "img": "https://content2.onliner.by/catalog/device/header/08e47b4c1ebc48e8781bc457bde7bdcc.jpeg",
+            "type": "smartphones"
         },
         {
             "id": "2",
@@ -22,7 +23,8 @@
             "frontCamera": "12",
             "battery": "2815",
             "RAM": "6",
-            "img": "https://content2.onliner.by/catalog/device/header/278321bd4b2a9678955bc2be8bf2ff62.jpeg"
+            "img": "https://content2.onliner.by/catalog/device/header/278321bd4b2a9678955bc2be8bf2ff62.jpeg",
+            "type": "smartphones"
         },
         {
             "id": "3",
@@ -34,7 +36,8 @@
             "frontCamera": "12",
             "battery": "2815",
             "RAM": "4",
-            "img": "https://content2.onliner.by/catalog/device/header/7a038f34cfcefde55447e5ab89066305.jpeg"
+            "img": "https://content2.onliner.by/catalog/device/header/7a038f34cfcefde55447e5ab89066305.jpeg",
+            "type": "smartphones"
         },
         {
             "id": "4",
@@ -46,7 +49,8 @@
             "frontCamera": "12",
             "battery": "2227",
             "RAM": "4",
-            "img": "https://content2.onliner.by/catalog/device/header/bf14a99b6b00fa25711a3e8e7a87d23a.jpeg"
+            "img": "https://content2.onliner.by/catalog/device/header/bf14a99b6b00fa25711a3e8e7a87d23a.jpeg",
+            "type": "smartphones"
         }
     ],
     "laptops": [
@@ -59,7 +63,8 @@
             "CPU": "Apple M",
             "RAM": "8",
             "CPU_clock_speed": "3200",
-            "img": "https://content2.onliner.by/catalog/device/header/f81d7ac523abe5530da64ebc9c7d855c.jpeg"
+            "img": "https://content2.onliner.by/catalog/device/header/f81d7ac523abe5530da64ebc9c7d855c.jpeg",
+            "type": "laptops"
         },
         {
             "id": "2",
@@ -70,7 +75,8 @@
             "CPU": "Apple M1",
             "RAM": "8",
             "CPU_clock_speed": "3200",
-            "img": "https://content2.onliner.by/catalog/device/header/9a08e5f5400e508fb975bf697669c2b5.jpeg"
+            "img": "https://content2.onliner.by/catalog/device/header/9a08e5f5400e508fb975bf697669c2b5.jpeg",
+            "type": "laptops"
         },
         {
             "id": "3",
@@ -81,7 +87,8 @@
             "CPU": "Apple M1",
             "RAM": "8",
             "CPU_clock_speed": "3200",
-            "img": "https://content2.onliner.by/catalog/device/header/2244054d09d62d4dceff1bbc13594886.jpeg"
+            "img": "https://content2.onliner.by/catalog/device/header/2244054d09d62d4dceff1bbc13594886.jpeg",
+            "type": "laptops"
         }
     ],
     "gadgets": [
@@ -92,7 +99,8 @@
             "memory": "32",
             "display": "44",
             "battery": "18",
-            "img": "https://content2.onliner.by/catalog/device/header/28c77d8c7afcca29371b846e78c0ee9c.jpeg"
+            "img": "https://content2.onliner.by/catalog/device/header/28c77d8c7afcca29371b846e78c0ee9c.jpeg",
+            "type": "gadgets"
         },
         {
             "id": "2",
@@ -101,7 +109,8 @@
             "memory": "32",
             "display": "40",
             "battery": "18",
-            "img": "https://content2.onliner.by/catalog/device/header/26f8729246ce4082c873f2c33cd26661.jpeg"
+            "img": "https://content2.onliner.by/catalog/device/header/26f8729246ce4082c873f2c33cd26661.jpeg",
+            "type": "gadgets"
         },
         {
             "id": "3",
@@ -110,8 +119,8 @@
             "memory": "32",
             "display": "44",
             "battery": "16",
-            "img": "https://content2.onliner.by/catalog/device/header/de676744b4d6fd5a46c1d9437c866f46.jpeg"
-
+            "img": "https://content2.onliner.by/catalog/device/header/de676744b4d6fd5a46c1d9437c866f46.jpeg",
+            "type": "gadgets"
         },
         {
             "id": "4",
@@ -120,7 +129,8 @@
             "memory": "32",
             "display": "40",
             "battery": "16",
-            "img": "https://content2.onliner.by/catalog/device/header/7517363584159c6c2f7ec0390b1f2ddc.jpeg"  
+            "img": "https://content2.onliner.by/catalog/device/header/7517363584159c6c2f7ec0390b1f2ddc.jpeg",
+            "type": "gadgets"
         }
     ]
   }

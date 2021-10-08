@@ -20,7 +20,7 @@ function GadgetsList() {
         <div className="container">
             <div className="row">
                 {data ?
-                    data.map(({ id, price, name, img }) => <Gadget id={id} price={price} name={name} key={id} img={img}/>)
+                    data.map(({ id, price, name, img }) => <Gadget id={id} price={price} name={name} key={id} img={img} data={data}/>)
                     : <Spinner animation="border" variant="info" />
                 }
             </div>
