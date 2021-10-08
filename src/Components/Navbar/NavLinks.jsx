@@ -6,9 +6,9 @@ function NavLinks() {
         <div className='wrapper-nav-links'>
             <ul className="nav nav-tabs" >
                 <li className="nav-item"><NavLink className="nav-link" activeClassName="active" exact to='/'>Home</NavLink></li>
-                <li className="nav-item"><NavLink className="nav-link" activeClassName="active" exact to='/smartphones'>Smartphones</NavLink></li>
-                <li className="nav-item"><NavLink className="nav-link" activeClassName="active" exact to='/laptops'>Laptops</NavLink></li>
-                <li className="nav-item"><NavLink className="nav-link" activeClassName="active" exact to='/gadgets'>Gadgets</NavLink></li>
+                <li className="nav-item"><NavLink className="nav-link" activeClassName="active" to='/smartphones'>Smartphones</NavLink></li>
+                <li className="nav-item"><NavLink className="nav-link" activeClassName="active" to='/laptops'>Laptops</NavLink></li>
+                <li className="nav-item"><NavLink className="nav-link" activeClassName="active" to='/gadgets'>Gadgets</NavLink></li>
             </ul>
         </div>
 
