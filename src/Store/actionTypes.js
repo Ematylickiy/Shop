@@ -1,2 +1,2 @@
-export const ADD_OR_REMOVE_TO_BASKET = "ADD_OR_REMOVE_TO_BASKET";
+export const ADD_TO_COMPARE = "ADD_TO_COMPARE";
 

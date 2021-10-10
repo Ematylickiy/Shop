@@ -1,0 +1,202 @@
+
+.img {
+    height: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.wrap-spinner {
+    margin: 10px auto;
+    width: 119px;
+}
+
+.card {
+    margin-top: 30px;
+    min-height: 322px;
+    padding: 23px 11px;
+    background-color: rgb(255, 255, 255);
+    border: 5px solid #21a1be;
+    border-radius: 25px;
+}
+
+.col .card {
+    margin: 70px auto;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.4s;
+    color: #494949;
+}
+.card-body {
+    padding: 1rem 0rem;
+    text-align: center;
+}
+
+.col .card:hover {
+    opacity: 1;
+    transition: 0.4s;
+    color: rgb(0, 0, 0);
+
+}
+
+
+.btn-basket{
+    border: none;
+    outline: none;
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.active{
+    background-color: black;
+}
+
+/* ////////////////////////PHONE PAGE/////////////////////////////// */
+
+.pagePhone {
+    color: #FFFFFF
+}
+
+.spinner-border {
+    margin: 90px auto;
+    width: 7rem;
+    height: 7rem;
+}
+
+.wrap-name-device span {
+    display: block;
+    width: 66px;
+    height: 45px;
+    cursor: pointer;
+    background-image: url('../../icons/back.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.wrap-name-device {
+    display: flex;
+    margin-top: 24px;
+    align-items: center;
+    background-color: #000000;
+    padding: 10px;
+    font-size: 66px;
+}
+
+.wrap-name-device h1 {
+    font-size: 41px;
+    letter-spacing: -1px;
+}
+
+.pagePhone .card{
+    width: 25%;
+    padding: 35px;
+    border-radius: 30px;
+} 
+
+.pagePhone .card div {
+    height: 278px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.content-page-device {
+    margin: 0 auto;
+    width: 80%;  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content-page-device .d-flex {
+    width: 260px;
+    margin: 20px 0;
+    justify-content: space-between;
+    align-items: center ;
+}
+
+.wrap-mainInfo h2 {
+    font-size: 5rem;
+    color: #36c3e3;
+}
+
+.wrap-mainInfo p {
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+
+.wrap-mainInfo .btn {
+    font-size: 24px;
+}
+
+
+.pagePhone .container {
+    height: 100px;
+    margin-top: 80px;
+}
+
+.pagePhone .container .col:not(:last-child) {
+    border-right: 1px solid;
+}
+
+.pagePhone .container .col h4 {
+    margin-bottom: 20px;
+}
+
+.pagePhone .container .row {
+    padding-bottom: 100px;
+}
+
+.logo-describe {
+    margin: 10px;
+    height: 64px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.display-logo {
+    background-image: url('../../icons/display.png');
+}
+.Camera-logo {
+    background-image: url('../../icons/photo-camera.png');
+}
+
+.CPU-logo {
+    background-image: url('../../icons/cpu.png');
+}
+.memory-logo {
+    background-image: url('../../icons/memory-card.png');
+}
+
+.Battery-logo {
+    background-image: url('../../icons/battery-status-full.png');
+}
+
+.Protection-logo {
+    background-image: url('../../icons/drop.png');
+}
+
+.logo-delivery {
+    background-image: url('../../icons/delivery.png');
+    height: 43px;
+    width: 38px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.form-switch .form-check-input:checked {
+    background-color: #36c3e3;
+}
+
+.form-check-label {
+    margin-top: 20px;
+    font-size: 21px;
+}
+
+.form-switch {
+    padding-left: 3.5em;
+}

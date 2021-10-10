@@ -1,0 +1,49 @@
+.wrap-page-compare{
+    margin-top: 40px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.wrap-page-compare .image-device{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 242px;
+}
+
+.wrap-page-compare .wrap-image {
+    margin: 20px auto;
+    background-color: white;
+    padding: 27px;
+    max-width: 247px;
+    border-radius: 15px;
+    border: 3px solid rgb(0, 165, 187);
+}
+
+.wrap-page-compare .col h4 {
+    margin-bottom: 18px;
+}
+
+.wrap-page-compare .form-check {
+    text-align: left;
+}
+
+.form-check-label {
+    margin-top: 0;
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+
+.wrap-page-compare .form-switch .form-check-input{
+    font-size: 21px;
+}
+
+hr {
+    color: white;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.form-check {
+    margin-bottom: 2.125rem;
+}

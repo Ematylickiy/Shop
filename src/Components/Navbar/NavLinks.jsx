@@ -15,5 +15,4 @@ function NavLinks() {
     )
 }
 
-//// сделать HOC(ковальчук) либо пробежать по массиву
 export default NavLinks

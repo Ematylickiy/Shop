@@ -1,4 +1,4 @@
-import { ADD_OR_REMOVE_TO_BASKET } from "./actionTypes";
+import { ADD_TO_COMPARE } from "./actionTypes";
 
 const initialState = {
     devices: [],
@@ -8,20 +8,10 @@ const initialState = {
 
 function reducer(state = initialState, action) {
     switch(action.type) {
-        case ADD_OR_REMOVE_TO_BASKET:
-            let targetDevice = state.devices.find(device => action.payload.name === device.name);
-            if (targetDevice) {
-                let devicesWithoutTarget = state.devices.filter(device => action.payload.name !== device.name)
-                return {
-                    ...state,
-                    devices: [...devicesWithoutTarget],
-                    totalPrice: state.totalPrice - Number(targetDevice.price)
-                }
-            }
+        case ADD_TO_COMPARE:
             return {
                 ...state,
-                devices: [...state.devices, action.payload],
-                totalPrice: state.totalPrice + Number(action.payload.price)
+                devices: [...state.devices, action.payload]
             };
         default: return state;
     }

@@ -1,11 +1,11 @@
-import { ADD_OR_REMOVE_TO_BASKET } from './actionTypes'
+import { ADD_TO_COMPARE } from './actionTypes'
 
 
-function addOrRemoveDeviceToBasket(device) {
+function addToCompare(device) {
     return { 
-        type: ADD_OR_REMOVE_TO_BASKET,
+        type: ADD_TO_COMPARE,
         payload: device
     };
 }
 
-export default addOrRemoveDeviceToBasket
+export default addToCompare

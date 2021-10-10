@@ -1,7 +1,7 @@
 
 async function request() {
   try {
-    const response = await fetch(`https://run.mocky.io/v3/278b20db-de60-484d-aae1-802aa69cd6a6`);
+    const response = await fetch(`https://run.mocky.io/v3/62607d5c-4b0f-4e5c-a383-8ee029631390`);
     const data = await response.json();
     return data;
   } catch (error) {
@@ -9,10 +9,10 @@ async function request() {
   }
 }
 
-async function getData(device){
+async function getData(){
   try {
     const data = await request();
-    return data[device];
+    return data;
   }
   catch (error) {
     console.log(error);
