@@ -12,6 +12,7 @@
             "CPU": "A14 Bionic chip",
             "RAM": "6 Gb",
             "img": "https://content2.onliner.by/catalog/device/header/08e47b4c1ebc48e8781bc457bde7bdcc.jpeg",
+            "screen": "OLED display",
             "type": "smartphones"
         },
         {
@@ -26,6 +27,7 @@
             "CPU": "A14 Bionic chip",
             "RAM": "6 Gb",
             "img": "https://content2.onliner.by/catalog/device/header/278321bd4b2a9678955bc2be8bf2ff62.jpeg",
+            "screen": "OLED display",
             "type": "smartphones"
         },
         {
@@ -40,6 +42,7 @@
             "CPU": "A14 Bionic chip",
             "RAM": "4 GB",
             "img": "https://content2.onliner.by/catalog/device/header/7a038f34cfcefde55447e5ab89066305.jpeg",
+            "screen": "OLED display",
             "type": "smartphones"
         },
         {
@@ -54,10 +57,57 @@
             "CPU": "A14 Bionic chip",
             "RAM": "4 Gb",
             "img": "https://content2.onliner.by/catalog/device/header/bf14a99b6b00fa25711a3e8e7a87d23a.jpeg",
+            "screen": "OLED display",
+            "type": "smartphones"
+        },
+        {
+            "id": "5",
+            "name": "Apple iPhone 11 pro max",
+            "price": "1300",
+            "memory": "256 Gb",
+            "display": "6.6''",
+            "camera": "12 Mp",
+            "frontCamera": "12 Mp",
+            "battery": "3969 mAh",
+            "CPU": "A13 Bionic chip",
+            "RAM": "4 Gb",
+            "img": "https://content2.onliner.by/catalog/device/header/6686806019785e22072123577bab27b6.jpeg",
+            "screen": "OLED display",
+            "type": "smartphones"
+        },
+        {
+            "id": "6",
+            "name": "Apple iPhone 11",
+            "price": "700",
+            "memory": "64 Gb",
+            "display": "6.1''",
+            "camera": "12 Mp",
+            "frontCamera": "12 Mp",
+            "battery": "3046 mAh",
+            "CPU": "A13 Bionic chip",
+            "RAM": "4 Gb",
+            "img": "https://content2.onliner.by/catalog/device/header/482e7898e6fae1270ba8d067639be58b.jpeg",
+            "screen": "IPS",
+            "type": "smartphones"
+        },
+        {
+            "id": "7",
+            "name": "Apple iPhone SE",
+            "price": "400",
+            "memory": "64 Gb",
+            "display": "4.7''",
+            "camera": "12 Mp",
+            "frontCamera": "12 Mp",
+            "battery": "1820 mAh",
+            "CPU": "A13 Bionic chip",
+            "RAM": "4 Gb",
+            "img": "https://content2.onliner.by/catalog/device/header/f0633ceddcea671999807d7b3845314b.jpeg",
+            "screen": "IPS",
             "type": "smartphones"
         }
+
     ],
-    "laptops": [
+    "computers": [
         {
             "id": "1",
             "name": "Apple Macbook Pro",
@@ -65,16 +115,33 @@
             "memory": "512 Gb",
             "display": "13.3''",
             "CPU": "Apple M1",
-            "RAM": "8 Gb",
+            "RAM": "16 Gb",
             "CPU_clock_speed": "3200 MHz",
             "img": "https://content2.onliner.by/catalog/device/header/f81d7ac523abe5530da64ebc9c7d855c.jpeg",
-            "type": "laptops",
+            "screen": "IPS",
+            "type": "computers",
             "battery": "up to 20 hours",
             "camera": "1 Mp"
 
         },
         {
             "id": "2",
+            "name": "Apple iMac Pro",
+            "price": "7000",
+            "memory": "1024 Gb",
+            "display": "27''",
+            "CPU": "Intel Xeon W",
+            "RAM": "32 Gb",
+            "CPU_clock_speed": "3200 MHz",
+            "img": "https://content2.onliner.by/catalog/device/header/1d294295b97d72d592e8f65a34d7aaa0.jpeg",
+            "screen": "IPS",
+            "type": "computers",
+            "battery": "up to 20 hours",
+            "camera": "2 Mp"
+
+        },
+        {
+            "id": "3",
             "name": "Apple Macbook Air",
             "price": "1700",
             "memory": "256 Gb",
@@ -83,12 +150,13 @@
             "RAM": "8 Gb",
             "CPU_clock_speed": "3200 MHz",
             "img": "https://content2.onliner.by/catalog/device/header/9a08e5f5400e508fb975bf697669c2b5.jpeg",
-            "type": "laptops",
+            "screen": "IPS",
+            "type": "computers",
             "battery": "up to 18 hours",
             "camera": "1 Mp"
         },
         {
-            "id": "3",
+            "id": "4",
             "name": "Apple iMac",
             "price": "2500",
             "memory": "256 Gb",
@@ -97,9 +165,25 @@
             "RAM": "8 Gb",
             "CPU_clock_speed": "3200 MHz",
             "img": "https://content2.onliner.by/catalog/device/header/2244054d09d62d4dceff1bbc13594886.jpeg",
-            "type": "laptops",
+            "screen": "IPS",
+            "type": "computers",
             "battery": "up to 24 hours",
             "camera": "1 Mp"
+        },
+        {
+            "id": "5",
+            "name": "Apple iMac Retina 5K 2020",
+            "price": "3000",
+            "memory": "512 Gb",
+            "display": "27''",
+            "CPU": "Intel Core i5",
+            "RAM": "8 Gb",
+            "CPU_clock_speed": "3200 MHz",
+            "img": "https://content2.onliner.by/catalog/device/header/2244054d09d62d4dceff1bbc13594886.jpeg",
+            "screen": "IPS",
+            "type": "computers",
+            "battery": "up to 24 hours",
+            "camera": "2 Mp"
         }
     ],
     "gadgets": [
@@ -111,6 +195,7 @@
             "display": "44mm",
             "battery": "up to 20 hours",
             "img": "https://content2.onliner.by/catalog/device/header/28c77d8c7afcca29371b846e78c0ee9c.jpeg",
+            "screen":"AMOLED",
             "protection": "IP68",
             "type": "gadgets"
         },
@@ -122,6 +207,7 @@
             "display": "40mm",
             "battery": "up to 19 hours",
             "img": "https://content2.onliner.by/catalog/device/header/26f8729246ce4082c873f2c33cd26661.jpeg",
+            "screen":"AMOLED",
             "protection": "IP68",
             "type": "gadgets"
         },
@@ -133,6 +219,7 @@
             "display": "44mm",
             "battery": "up to 18 hours",
             "img": "https://content2.onliner.by/catalog/device/header/de676744b4d6fd5a46c1d9437c866f46.jpeg",
+            "screen":"AMOLED",
             "protection": "IP68",
             "type": "gadgets"
         },
@@ -144,6 +231,7 @@
             "display": "40mm",
             "battery": "up to 16 hours",
             "img": "https://content2.onliner.by/catalog/device/header/7517363584159c6c2f7ec0390b1f2ddc.jpeg",
+            "screen":"AMOLED",
             "protection": "IP68",
             "type": "gadgets"
         }

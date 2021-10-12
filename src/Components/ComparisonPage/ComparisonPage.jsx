@@ -6,9 +6,7 @@ import './ComparisonPage.css'
 
 function ComparisonPage() {
     const [select, setSelect] = useState(false)
-    const state = useSelector(state => state.devices)
-
-
+    const state = useSelector(state => state.cart)
     
     return (
         <div className='wrap-page-compare'>

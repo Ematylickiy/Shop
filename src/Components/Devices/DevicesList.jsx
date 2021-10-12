@@ -16,10 +16,12 @@ function DevicesList({typeDevice}) {
         }
         getDataDevice() 
     }, [typeDevice]);
-    
 
     return (
         <div className="container">
+
+            
+
             <div className="row">
                 {data ?
                     data.map(data => <Device key={data.id} data={data} device= {`/${typeDevice}/`} />)

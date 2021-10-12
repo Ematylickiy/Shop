@@ -1,0 +1,142 @@
+.wrap-basket h1,h2{
+    color: white;
+}
+
+/* .wrap-basket .wrap-img-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+.wrap-basket .card-body {
+    text-align: left;
+}
+
+.wrap-basket .img {
+    margin: 3px 20px 9px 19px;
+    width: 45px;
+    height: 60px;
+}
+
+.wrap-basket .card {
+    min-height: 153px;
+    margin-right: 20px;
+    padding: 3px;
+}
+
+.wrap-basket .row {
+    max-width: 800px;
+    height: 0px;
+}
+
+.wrap-order-info {
+    border-radius: 17px;
+    border: 4px solid #36c3e3;
+    padding: 20px;
+    height: 200px;
+    margin: 25px 25px 0 0;
+    text-align: center;
+}
+
+.wrap-order-info h2 {
+    color: #36c3e3;
+    margin-bottom: 40px;
+}
+
+.wrap-basket .d-flex{
+    justify-content: space-between;
+}
+
+.info {
+    margin-top: 70px;
+    text-align: center;
+}
+
+
+.wrap-order-info .btn {
+    border-radius: 17px;
+    padding: 9px;
+    font-size: 21px;
+}
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+    
+.table {
+    width: 64%;
+}
+
+th:first-child{
+    text-align: left;
+    text-transform: uppercase;
+}
+
+tbody{
+    background: #ffffff;
+}
+
+.table-product {
+    display: flex;
+    align-items: center;
+}
+
+.table-product .card-title {
+    margin: 5px 0 0 0;
+}
+
+tr {
+    height: 100px;
+}
+
+thead {
+    color: white;
+    font-size: 23px;
+    text-align: center;
+}
+
+td p{
+    margin-top: 37px;
+}
+
+.table .input-group {
+    width: 79%;
+    margin: 30px auto;
+}
+
+.table-price, .table-quantity, .table-amount {
+    width: 17%;
+    text-align: center;
+}
+
+table .card-title {
+    font-size: 17px;
+}
+
+.remove-product-fromCart {
+    padding: 2px;
+    color: gray;
+    margin: 5px 0 0 10px;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.remove-product-fromCart:hover {
+    color: black;
+    font-weight: bolder;
+    transition: 0.2s all ease;
+    opacity: 1;
+}
+
+.table-quantity .btn {
+    font-size: 18px;
+}
+
+.table-quantity .btn:hover {
+    color: rgb(46, 161, 1);
+}
+
+.table-quantity .btn:first-child:hover {
+    color: rgb(219, 27, 1);
+}

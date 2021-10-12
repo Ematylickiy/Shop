@@ -7,7 +7,7 @@ function NavLinks() {
             <ul className="nav nav-tabs" >
                 <li className="nav-item"><NavLink className="nav-link" activeClassName="active" exact to='/'>Home</NavLink></li>
                 <li className="nav-item"><NavLink className="nav-link" activeClassName="active" to='/smartphones'>Smartphones</NavLink></li>
-                <li className="nav-item"><NavLink className="nav-link" activeClassName="active" to='/laptops'>Laptops</NavLink></li>
+                <li className="nav-item"><NavLink className="nav-link" activeClassName="active" to='/computers'>Computers</NavLink></li>
                 <li className="nav-item"><NavLink className="nav-link" activeClassName="active" to='/gadgets'>Gadgets</NavLink></li>
             </ul>
         </div>

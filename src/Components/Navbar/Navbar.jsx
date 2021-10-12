@@ -8,10 +8,17 @@ import SearchPanel from './SearchPanel'
 
 function Navbar() {
     let history = useHistory()
+
     const state = useSelector((state) => state)
 
     const handleAddress = (path) => {
         history.push(`/${path}`)
+    }
+    
+    let countCart = 0
+
+    if (state.cart.length) {
+        state.cart.map(item => countCart += item.count)
     }
 
     return (
@@ -25,12 +32,12 @@ function Navbar() {
                     <div className='wrapper-totalPrice'>
                         <button type="button" className="btn btn-sm btn-link position-relative" onClick={()=>handleAddress('compare')}>
                             <img src='https://cdn1.savepice.ru/uploads/2021/10/9/afec8f5bd0e139ec081672427ebf016b-full.png' width="45" alt="" />
-                                <span className="badge rounded-pill position-compare">{state.devices.length}</span>
+                                <span className="badge rounded-pill position-compare">{}</span>
                         </button>
                         
-                        <button type="button" className="btn btn-sm btn-link position-relative">
+                        <button type="button" className="btn btn-sm btn-link position-relative" onClick={()=>handleAddress('basket')}>
                             <img src='https://img-premium.flaticon.com/png/512/3757/premium/3757832.png?token=exp=1633613088~hmac=986bc0262d12994d2b92ceae23136054' width="45" alt="" />
-                                <span className="badge rounded-pill">{state.devices.length}</span>
+                                <span className="badge rounded-pill">{countCart}</span>
                         </button>
                         <span className='text-white'>{state.totalPrice},00$</span>  
                     </div>
