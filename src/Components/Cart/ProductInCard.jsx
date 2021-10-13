@@ -12,12 +12,10 @@ function ProductInCard({ device }) {
     let state = useSelector(state => state.cart)
     const { img, name, price} = device
     state = state.filter(item => item.name === name)[0]
-    const [amount, setAmount] = useState(price*state.count)
+    const [amount, setAmount] = useState(price * state.count)
     
 
     const [totalQuantityDevice, setTotalQuantityDevice] = useState(state.count)
-
-    console.log(price, state.count)
 
     const dispatch = useDispatch()
 
