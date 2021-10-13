@@ -233,3 +233,32 @@
     transition: 0.3s all;
     background-color: rgb(225, 255, 255);
 }
+
+/* /////////////////////////////////////////////////////////////
+ */
+
+ .test {
+    background-image: url('../../icons/plus.png');
+    width: 29px;
+    height: 29px;
+    background-size: contain;
+    background-repeat: no-repeat; 
+    background-position: center;
+
+}
+
+ .test_2 {
+    background-image: url('../../icons/check.png');
+    width: 29px;
+    height: 29px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.col .card .badge {
+    position: absolute;
+    top: 4px;
+    left: 28px;
+    background-color: white ;
+}

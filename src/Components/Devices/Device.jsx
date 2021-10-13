@@ -1,31 +1,47 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { useHistory } from 'react-router';
-import { addToCart } from '../../Store/actions';
+import { addToCart, deleteFromCart } from '../../Store/actions';
 import { useDispatch, useSelector } from 'react-redux'
 
 
 
 function Device({ data, device }) {
+    const { id, price, name, img } = data
+    data.count = 1
+
+    const dispatch = useDispatch()
+    const state = useSelector(state => state.cart)
+
     
     let history = useHistory()
     const openDevicePage = id => {
         history.push(`${device}${id}`);
     }
 
-    const dispatch = useDispatch()
-    const state = useSelector(state => state.cart)
+    const [btnAddtoCart, setBtnAddtoCart] = useState()
 
-
-    const { id, price, name, img } = data
+    useEffect(() => {
+        function checkCart() {
+            const isInCart = state.some(item => item.name === name)
+            setBtnAddtoCart(isInCart)
+        }
+        checkCart()
+    }, [name, state])
     
-    data.count = 1
 
     const addProductToCart = () => {
-        let namesDevicesInCart = state.map(item=>item.name)
-        namesDevicesInCart.includes(name) ? alert ('Product has already been added') : dispatch(addToCart(data))
-        // dispatch(addToCart(data))
-    }
+        const isInCart = state.some(item => item.name === name)
+        const deviceInCart = state.find(item => item.name === name)
+        if (isInCart) {
+            let amount = deviceInCart.count * price
+            dispatch(deleteFromCart(data, amount))
+            setBtnAddtoCart(!btnAddtoCart)
 
+        } else {
+            dispatch(addToCart(data))
+            setBtnAddtoCart(!btnAddtoCart)
+        }
+    }
 
     return (
         <div className="col">
@@ -38,7 +54,15 @@ function Device({ data, device }) {
                 </div>
             </div>
                 <div className='d-flex justify-content-center'>
-                    <button onClick={addProductToCart} className='add-basket-btn'>Add to cart</button>
+                    {/* <button onClick={addProductToCart} className='add-basket-btn'>Add to cart</button> */}
+
+                    <button type="button" className="btn btn-sm btn-link position-relative" onClick={addProductToCart}>
+                        <img src='https://img-premium.flaticon.com/png/512/3757/premium/3757832.png?token=exp=1633613088~hmac=986bc0262d12994d2b92ceae23136054' width="55" alt="" />
+                        <div className={`badge rounded-pill ${btnAddtoCart ? 'test_2' : 'test'}`}> </div>
+                    </button>
+
+
+                    {/* <button onClick={addProductToCart} className={`badge rounded-pill ${btnAddtoCart ? 'test_2' : 'test'}`}></button> */}
                 </div>
         </div>
     </div>

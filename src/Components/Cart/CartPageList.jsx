@@ -4,6 +4,7 @@ import { useSelector} from 'react-redux'
 import ProductInCard from './ProductInCard';
 
 
+
 function CartPageList() {
 
     const state = useSelector(state => state.cart)
@@ -43,9 +44,9 @@ function CartPageList() {
                                 </tr>
                             </thead>
                             <tbody>
-                                    {state.map(device => (
-                                        <ProductInCard device={device} key={device.name}/>
-                                    ))}
+                                {state.map(device => (
+                                    <ProductInCard device={device} key={device.name}/>
+                                ))}
                             </tbody>
                         </table>
                         <div className='wrap-order-info'>
@@ -56,7 +57,7 @@ function CartPageList() {
                     </div>
                 </div>
                 :
-                    <h1 h1 className='info'>Your cart is empty.</h1>
+                    <h1 className='info'>Your cart is empty.</h1>
             }
         </div> 
     )
