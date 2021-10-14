@@ -1,8 +1,9 @@
-import { ADD_TO_CART, DELETE_FROM_CART, ADD_TO_COMPARISON, INCREASE_TOTALPRICE, DECREASE_TOTALPRICE } from "./actionTypes";
+import { ADD_TO_CART, DELETE_FROM_CART, ADD_TO_FILTEREDLIST, INCREASE_TOTALPRICE, DECREASE_TOTALPRICE } from "./actionTypes";
 
 const initialState = {
     cart: [],
-    totalPrice: 0
+    totalPrice: 0,
+    filteredList: [],
   };
 
 
@@ -33,6 +34,11 @@ function reducer(state = initialState, action) {
             return {
                 ...state,
                 totalPrice: state.totalPrice - action.payload.price
+            };
+        case ADD_TO_FILTEREDLIST:
+            return {
+                ...state,
+                filteredList: [...action.payload]
             };
         
         default: return state;

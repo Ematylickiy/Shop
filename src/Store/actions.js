@@ -1,4 +1,4 @@
-import { DELETE_FROM_CART, ADD_TO_CART, ADD_TO_COMPARISON, INCREASE_TOTALPRICE, DECREASE_TOTALPRICE } from './actionTypes'
+import { DELETE_FROM_CART, ADD_TO_CART, ADD_TO_FILTEREDLIST, INCREASE_TOTALPRICE, DECREASE_TOTALPRICE } from './actionTypes'
 
 
 export function deleteFromCart(device, amount) {
@@ -16,10 +16,10 @@ export function addToCart(device) {
     };
 }
 
-export function addToComparison(device) {
+export function addToFilteredList(list) {
     return { 
-        type: ADD_TO_COMPARISON,
-        payload: device
+        type: ADD_TO_FILTEREDLIST,
+        payload: list
     };
 }
 

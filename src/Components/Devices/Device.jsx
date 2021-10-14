@@ -4,9 +4,8 @@ import { addToCart, deleteFromCart } from '../../Store/actions';
 import { useDispatch, useSelector } from 'react-redux'
 
 
-
-function Device({ data, device }) {
-    const { id, price, name, img } = data
+function Device({ data, device, showAlert }) {
+    const { id, price, name, img} = data
     data.count = 1
 
     const dispatch = useDispatch()
@@ -40,32 +39,31 @@ function Device({ data, device }) {
         } else {
             dispatch(addToCart(data))
             setBtnAddtoCart(!btnAddtoCart)
+            showAlert('visible-alert')
         }
     }
 
+
     return (
-        <div className="col">
-        <div className="card" style={{ width: "18rem" }} >
-            <div onClick={() => openDevicePage(id)}>
-                <div className='img' style={{ backgroundImage:`url(${img})`}}></div>
-                    <div className="card-body">
-                        <h5 className="card-title">{name}</h5>
-                        <p className="card-text">{price} $</p>
+            <div className="col" title='iPhone'>
+            <div className="card" style={{ width: "18rem" }} >
+                <div onClick={() => openDevicePage(id)}>
+                    <div className='img' style={{ backgroundImage:`url(${img})`}}></div>
+                        <div className="card-body">
+                            <h5 className="card-title">{name}</h5>
+                            
+                            <p className="card-text">{price} $</p>
+                    </div>
                 </div>
+                    <div className='d-flex justify-content-center'>
+                        <button type="button" className="btn btn-sm btn-link position-relative" onClick={addProductToCart}>
+                            <img src='https://img-premium.flaticon.com/png/512/3757/premium/3757832.png?token=exp=1633613088~hmac=986bc0262d12994d2b92ceae23136054' width="55" alt="" />
+                            <div className={`badge rounded-pill ${btnAddtoCart ? 'test_2' : 'test'}`}> </div>
+                        </button>
+                    </div>
             </div>
-                <div className='d-flex justify-content-center'>
-                    {/* <button onClick={addProductToCart} className='add-basket-btn'>Add to cart</button> */}
-
-                    <button type="button" className="btn btn-sm btn-link position-relative" onClick={addProductToCart}>
-                        <img src='https://img-premium.flaticon.com/png/512/3757/premium/3757832.png?token=exp=1633613088~hmac=986bc0262d12994d2b92ceae23136054' width="55" alt="" />
-                        <div className={`badge rounded-pill ${btnAddtoCart ? 'test_2' : 'test'}`}> </div>
-                    </button>
-
-
-                    {/* <button onClick={addProductToCart} className={`badge rounded-pill ${btnAddtoCart ? 'test_2' : 'test'}`}></button> */}
-                </div>
         </div>
-    </div>
+
     )
 }
 

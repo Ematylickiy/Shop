@@ -6,6 +6,10 @@
     background-position: center;
 }
 
+.row {
+    margin-top: 16px;
+}
+
 .wrap-spinner {
     margin: 10px auto;
     width: 119px;
@@ -16,12 +20,12 @@
     min-height: 322px;
     padding: 23px 11px;
     background-color: rgb(255, 255, 255);
-    border: 5px solid #21a1be;
+    box-shadow: 0px 0px 25px rgb(17, 183, 224);
     border-radius: 25px;
 }
 
 .col .card {
-    margin: 70px auto;
+    margin: 30px auto;
     cursor: pointer;
     opacity: 0.9;
     transition: 0.4s;
@@ -132,6 +136,9 @@
     margin-right: 10px;
 }
 
+.row {
+    width: 990px;
+}
 
 .pagePhone .container {
     height: 100px;
@@ -261,4 +268,23 @@
     top: 4px;
     left: 28px;
     background-color: white ;
+}
+.container .card .d-flex .btn-sm{
+    border-radius: 20px;
+}
+
+.container .card .d-flex .btn-sm:hover {
+    box-shadow: 0px 0px 10px rgb(17, 183, 224);
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.hide-alert {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.visible-alert {
+    opacity: 1;
+    transition: 0.5s;
 }
