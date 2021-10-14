@@ -6,8 +6,7 @@ import {decreaseTotalPrice, increaseTotalPrice} from '../../Store/actions'
 
 
 function ProductInCard({ device }) {
-    
-    
+
     
     let state = useSelector(state => state.cart)
     const { img, name, price} = device
