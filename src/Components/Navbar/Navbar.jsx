@@ -32,7 +32,7 @@ function Navbar() {
                     <div className='wrapper-totalPrice'>
                         <button type="button" className="btn btn-sm btn-link position-relative" onClick={()=>handleAddress('compare')}>
                             <img src='https://cdn1.savepice.ru/uploads/2021/10/9/afec8f5bd0e139ec081672427ebf016b-full.png' width="45" alt="" />
-                                <span className="badge rounded-pill position-compare">{}</span>
+                                <span className="badge rounded-pill position-compare">{state.comparison.length}</span>
                         </button>
                         
                         <button type="button" className="btn btn-sm btn-link position-relative" onClick={()=>handleAddress('basket')}>

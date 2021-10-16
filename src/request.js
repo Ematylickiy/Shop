@@ -1,7 +1,7 @@
 
 async function request() {
   try {
-    const response = await fetch(`https://run.mocky.io/v3/ca698304-4469-420b-84fa-473d49266873`);
+    const response = await fetch(`https://run.mocky.io/v3/0a1402e7-9f03-4781-a2ce-e85604b8d0f1`);
     const data = await response.json();
     return data;
   } catch (error) {

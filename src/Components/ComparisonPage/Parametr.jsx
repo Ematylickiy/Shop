@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Parametr({ parametr, logo, RAM }) {
+function Parametr({ parametr, logo}) {
     
     return (
         <>
@@ -8,7 +8,6 @@ function Parametr({ parametr, logo, RAM }) {
                 <div>
                     <div className={`${logo}-logo logo-describe`}></div>
                     <h6>{`${parametr}`}</h6>
-                    {RAM ? <h6>RAM size: {`${RAM}`}</h6> : ''}   
                 </div>
                 : ''
         } 

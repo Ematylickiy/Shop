@@ -10,21 +10,21 @@ function CartPageList() {
     const state = useSelector(state => state.cart)
     const totalPrice = useSelector(state => state.totalPrice)
 
-    const resultArray = [];
-// ///////////////////////////////////////////////////////////////////////
-    state.map(item => {
+    // ///////////////////////////////////////////////////////////////////////
+    // const resultArray = [];
+    // state.map(item => {
 
-        if(resultArray.find(object => {
-            if (object.name === item.name) {
-                return true;
-            } else {
-                return false;
-            }
-        })){
-        } else {
-            resultArray.push(item);
-        }
-    })
+    //     if(resultArray.find(object => {
+    //         if (object.name === item.name) {
+    //             return true;
+    //         } else {
+    //             return false;
+    //         }
+    //     })){
+    //     } else {
+    //         resultArray.push(item);
+    //     }
+    // })
     
 /////////////////////////////////////////////////////////////////////////////////////////
 

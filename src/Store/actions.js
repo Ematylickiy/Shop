@@ -1,4 +1,4 @@
-import { DELETE_FROM_CART, ADD_TO_CART, ADD_TO_FILTEREDLIST, INCREASE_TOTALPRICE, DECREASE_TOTALPRICE } from './actionTypes'
+import { DELETE_FROM_CART, ADD_TO_CART, ADD_TO_COMPARISON, INCREASE_TOTALPRICE, DECREASE_TOTALPRICE, DELETE_FROM_COMPARISON } from './actionTypes'
 
 
 export function deleteFromCart(device, amount) {
@@ -9,6 +9,13 @@ export function deleteFromCart(device, amount) {
     };
 }
 
+export function deleteFromComparison(device) {
+    return { 
+        type: DELETE_FROM_COMPARISON,
+        payload: device,
+    };
+}
+
 export function addToCart(device) {
     return { 
         type: ADD_TO_CART,
@@ -16,9 +23,9 @@ export function addToCart(device) {
     };
 }
 
-export function addToFilteredList(list) {
+export function addToComparison(list) {
     return { 
-        type: ADD_TO_FILTEREDLIST,
+        type: ADD_TO_COMPARISON,
         payload: list
     };
 }

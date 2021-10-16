@@ -1,5 +1,7 @@
-.wrap-basket h1,h2{
+.wrap-basket h1{
     color: white;
+    text-align: center;
+    margin-top: 100px;
 }
 
 /* .wrap-basket .wrap-img-title {

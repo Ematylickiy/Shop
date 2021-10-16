@@ -94,11 +94,12 @@
     letter-spacing: -1px;
 }
 
-.pagePhone .card{
+.pagePhone .card {
+    margin-left: 35px;
     width: 29%;
     padding: 35px;
     border-radius: 30px;
-} 
+}
 
 .pagePhone .card div {
     height: 278px;
@@ -109,7 +110,7 @@
 
 .content-page-device {
     margin: 0 auto;
-    width: 80%;  
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -120,6 +121,10 @@
     margin: 20px 0;
     justify-content: space-between;
     align-items: center ;
+}
+
+.wrap-mainInfo {
+    min-width: 393px;
 }
 
 .wrap-mainInfo h2 {
@@ -133,7 +138,9 @@
 }
 
 .wrap-mainInfo .btn {
-    font-size: 24px;
+    margin-bottom: 14px;
+    width: 319px;
+    font-size: 25px;
     margin-right: 10px;
 }
 
@@ -165,7 +172,7 @@
 .display-logo {
     background-image: url('../../icons/display.png');
 }
-.Camera-logo {
+.camera-logo {
     background-image: url('../../icons/photo-camera.png');
 }
 
@@ -176,12 +183,15 @@
     background-image: url('../../icons/memory-card.png');
 }
 
-.Battery-logo {
+.battery-logo {
     background-image: url('../../icons/battery-status-full.png');
 }
 
-.Protection-logo {
+.protection-logo {
     background-image: url('../../icons/drop.png');
+}
+.RAM-logo {
+    background-image: url('../../icons/ram.png');
 }
 
 .logo-delivery {
@@ -262,7 +272,7 @@
 
 .col .card .badge {
     position: absolute;
-    top: 4px;
+    top: 2px;
     left: 28px;
     background-color: white ;
 }
@@ -274,14 +284,45 @@
     box-shadow: 0px 0px 10px rgb(17, 183, 224);
 }
 
+.col .card .justify-content-between {
+    width: 80%;
+    margin: 0 auto;
+}
+
 /* ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .hide-alert {
     opacity: 0;
-    transition: 0.5s;
+    transition: 0.3s;
+    position: fixed;
+    right: 120px;
+    bottom: 20px;
+    z-index: 1;
 }
 
 .visible-alert {
     opacity: 1;
-    transition: 0.5s;
+    transition: 0.3s;
+    position: fixed;
+    right: 120px;
+    bottom: 20px;
+    z-index: 1;
 }
+
+
+.wrap-scales-btn {
+    background-image: url('../../icons/scales.png');
+    width: 20px;
+    height: 20px;
+}
+
+.scales .test {
+    width: 28px;
+    height: 29px;
+}
+
+
+.col .card .scales .badge {
+    left: 22px;
+}
+
