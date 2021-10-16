@@ -9,9 +9,12 @@ import Alert from '@mui/material/Alert';
 
 
 
+
 function DevicesList({typeDevice}) {
     const [data, setData] = useState()
-    const [visibleAlert, setvisibleAlert] = useState('hide-alert')
+    const [visibleAlertSuccess, setvisibleAlertSuccess] = useState('hide-alert')
+    const [visibleAlertWarning, setVisibleAlertWarning] = useState('hide-alert')
+    const [visibleAlertError, setVisibleAlertError] = useState('hide-alert')
 
     
     useEffect(() => {
@@ -27,9 +30,9 @@ function DevicesList({typeDevice}) {
     const sortDeviceList = (newData) => setData(newData)
     
 
-    const showAlert = (parametr) => {
-        setvisibleAlert(parametr)
-        setTimeout(()=>setvisibleAlert('hide-alert'), 1500)
+    const showAlert = (parametr, setState) => {
+        setState(parametr)
+        setTimeout(()=>setState('hide-alert'), 1500)
     }
 
 
@@ -39,16 +42,31 @@ function DevicesList({typeDevice}) {
                 <Sorting data={data} sortDeviceList={sortDeviceList} />
                 <div className="row">
                     { data ?
-                        data.map(data => <Device key={data.id} data={data} device={`/${typeDevice}/`} showAlert={showAlert}/>)
+                        data.map(data => <Device key={data.id}
+                            data={data}
+                            device={`/${typeDevice}/`}
+                            showAlert={showAlert}
+                            setvisibleAlertSuccess={setvisibleAlertSuccess}
+                            setVisibleAlertWarning={setVisibleAlertWarning}
+                            setVisibleAlertError={setVisibleAlertError}
+                        />)
                         : <Spinner animation="border" variant="info" />
                     }
                 </div>
             </div>
             
             <div>
-                {/* <div className={`${visibleAlert}`}>
-                    <Alert severity="success">Added to your cart successfully!</Alert>
-                </div> */}
+
+                <div className={`${visibleAlertSuccess}`}>
+                    <Alert variant="filled" severity="success">Added to your cart successfully!</Alert>
+                </div>
+                <div className={`${visibleAlertError}`}>
+                    <Alert variant="filled" severity="error">Maximum for comparison - 4!</Alert>
+                </div>
+                <div className={`${visibleAlertWarning}`}>
+                    <Alert variant="filled" severity="warning">You are trying to compare different types of products!</Alert>
+                </div>
+
                 {data ? <Filter typeDevice={typeDevice} sortDeviceList={sortDeviceList}/> : ''}
             </div>
         </div>
