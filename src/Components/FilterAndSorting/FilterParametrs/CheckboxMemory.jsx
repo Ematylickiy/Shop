@@ -1,16 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
-function CheckboxMemory({ name }) {
+function CheckboxMemory({ name, state, setState, unit }) {
 
-    const [checked, setChecked] = useState(false)
-
-
+    const handleChecked = () => setState({ ...state, checkBoxes: { ...state.checkBoxes, [name]: !state.checkBoxes[name] } })
+    
     return (
             <FormControlLabel
-            control={<Checkbox name={name} checked={checked} onChange={()=>setChecked(!checked) }/>}
-                  label={`${name}Gb`} />
+            control={<Checkbox name={name} checked={state.checkBoxes[name]} onChange={handleChecked} />}
+                  label={`${name}${unit}`} />
     )
 }
 

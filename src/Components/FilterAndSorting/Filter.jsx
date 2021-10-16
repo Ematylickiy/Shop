@@ -1,173 +1,205 @@
-import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-
-
+import React, { useState, useEffect } from 'react'
+import { useLocation } from 'react-router'
 import './FilterAndSorting.css'
-import { Slider } from '@mui/material';
-import CheckboxMemory from './FilterParametrs/CheckboxMemory';
-import { addToFilteredList } from '../../Store/actions';
+import getData from '../../request'
+import RangeParametr from './FilterParametrs/RangeParametr';
+import MemoryParametr from './FilterParametrs/MemoryParametr';
 
 
 
-function Filter({ data }) {
-  const dispatch = useDispatch()
-  const [filteredList , setFilteredList] = useState(data)
-  const [valueDisplay, setValueDisplay] = useState([4.6, 6.8]);
-  const [price, setPrice] = useState([400, 1900]) 
-  const [checkboxMemory, setCheckboxMemory] = useState([])
-  const [checkboxRAM, setCheckboxRAM] = useState([])
+function Filter({sortDeviceList, typeDevice}) {
+
+  let location = useLocation();
+
+  const [dataServer, setDataServer] = useState()
    
-  
-  const filter = () => {
-    let newData = data.filter(item => {
-      return item.price >= price[0] && item.price <= price[1]
-    })
+  useEffect(() => {
+    async function getDataDevice() {
+      let currentPath = location.pathname.slice(1)
+      const data = await getData()
+      setDataServer(data[currentPath]);
+    }
+    getDataDevice() 
+  }, [location.pathname]);
 
-    newData = newData.filter(item => {
-      return item.display.slice(0, -2) >= valueDisplay[0] && item.display.slice(0, -2) <= valueDisplay[1]
-    })
-    if (checkboxMemory.length) {
-      newData = newData.filter(item => {
-        return checkboxMemory.indexOf(item.memory.split(' ')[0]) > -1
+
+
+  useEffect(() => {
+    function resetFilterParametrs() {
+      setPhonesFilter({
+        price: [400, 1900],
+        display: [4.6, 6.8],
+        checkBoxes: {
+          64: false,
+          128: false,
+          256: false,
+          4: false,
+          6: false
+        }
       })
-    }
-    if (checkboxRAM.length) {
-      newData = newData.filter(item => {
-        return checkboxRAM.indexOf(item.RAM.split(' ')[0]) > -1
+      setCompFilter({
+        price: [1700, 7000],
+        display: [13.3, 27],
+        checkBoxes: {
+          8: false,
+          16: false,
+          32: false,
+          256: false,
+          512: false,
+          1024: false
+        }
       })
+      setGadgetsFilter({
+        price: [350, 520],
+        checkBoxes: {
+          40: false,
+          44: false
+        }
+      })
+      setCheckboxMemory([])
+      setCheckboxRAM([])
     }
-    setFilteredList(newData)
-  }
-  
-  
-  const filterByPrice = (event, newValue) => {
-    setPrice(newValue)
-    filter()
-  }
-  
-  const filterByDisplay = (event, newValue) => {
-    setValueDisplay(newValue);
-    filter()
+    resetFilterParametrs() 
+  }, [location.pathname]);
+
+
+  const defaultStatePhonesFilter = {
+    price: [400, 1900],
+    display: [4.6, 6.8],
+    checkBoxes: {
+      64: false,
+      128: false,
+      256: false,
+      4: false,
+      6: false
+    }
   };
 
-  //////////////////////////////////////////// refactor ////////////////////////////
-  const filterByStorage = (e) => {
-    if (e.target.checked) {
-      let newValueCheckboxes = checkboxMemory
-      newValueCheckboxes.push(e.target.name)
-      setCheckboxMemory(newValueCheckboxes)
+  const defaultStateComputersFilter = {
+    price: [1700, 7000],
+    display: [13.3, 27],
+    checkBoxes: {
+      8: false,
+      16: false,
+      32: false,
+      256: false,
+      512: false,
+      1024: false
     }
-    else {
-      let checkedFalse = checkboxMemory.indexOf(e.target.name)
-      let newValueCheckboxes = checkboxMemory
-      newValueCheckboxes.splice(checkedFalse, 1) 
-      setCheckboxMemory(newValueCheckboxes)
-    }
-    filter()
-  }
+  };
 
-
-  const filterByRAM = (e) => {
-    if (e.target.checked) {
-      let newValueCheckboxes = checkboxRAM
-      newValueCheckboxes.push(e.target.name)
-      setCheckboxRAM(newValueCheckboxes)
+  const defaultStateGadgetsFilter = {
+    price: [350, 520],
+    checkBoxes: {
+      40: false,
+      44: false
     }
-    else {
-      let checkedFalse = checkboxRAM.indexOf(e.target.name)
-      let newValueCheckboxes = checkboxRAM
-      newValueCheckboxes.splice(checkedFalse, 1) 
-      setCheckboxRAM(newValueCheckboxes)
-    }
-    filter()
-  }
-
-  const showFilteredList = () => {
-    dispatch(addToFilteredList(filteredList))
   }
   
-  
+  const [phonesFilter, setPhonesFilter] = useState(defaultStatePhonesFilter);
+  const [compFilter, setCompFilter] = useState(defaultStateComputersFilter);
+  const [gadgetsFilter, setGadgetsFilter] = useState(defaultStateGadgetsFilter);
+  const [checkboxMemory, setCheckboxMemory] = useState([])
+  const [checkboxRAM, setCheckboxRAM] = useState([])
 
   const resetFilter = () => {
-    setValueDisplay([4.6, 6.8])
-    setPrice([400, 1900])
+    setPhonesFilter(defaultStatePhonesFilter)
+    setCompFilter(defaultStateComputersFilter)
+    setGadgetsFilter(defaultStateGadgetsFilter)
     setCheckboxMemory([])
     setCheckboxRAM([])
-    dispatch(addToFilteredList(data))
-    setFilteredList(data)
+    sortDeviceList(dataServer)
   }
 
+  const checkCheckboxes = (data, state, typeMemory) => {
+    if (state.length) {
+      return data.filter(item => state.indexOf(item[typeMemory].split(' ')[0]) > -1)
+    }
+    else return data
+  }
+  
+  const filterDevices = (state, typeMemory = 'memory') => {
+    let newData = dataServer.filter(item => item.price >= state.price[0] && item.price <= state.price[1]);
+    newData = newData.filter(item => item.display.slice(0, -2) >= state.display[0] && item.display.slice(0, -2) <= state.display[1])
+    newData = checkCheckboxes(newData, checkboxMemory, typeMemory)
+    newData = checkCheckboxes(newData, checkboxRAM, 'RAM')
+    sortDeviceList(newData)
+  }
+
+
+  const filter = () => {
+    if (typeDevice === 'smartphones') {
+      filterDevices(phonesFilter)
+    };
+
+    if (typeDevice === 'computers') {
+      filterDevices(compFilter)
+    };
+
+    if (typeDevice === 'gadgets') {
+      let newData = dataServer.filter(item => item.price >= gadgetsFilter.price[0] && item.price <= gadgetsFilter.price[1]);
+      if (checkboxMemory.length) {
+        newData = newData.filter(item => {
+          return checkboxMemory.indexOf(item.display.split(' ')[0]) > -1
+        })
+      }
+      sortDeviceList(newData)
+    }
+  }
+
+  
+  const filterRange = (parametr, newValue) => {
+    if (typeDevice === 'smartphones') {
+      setPhonesFilter({ ...phonesFilter, [parametr]: newValue })
+    }
+    if (typeDevice === 'computers') {
+      setCompFilter({ ...compFilter, [parametr]: newValue })
+    }
+    if (typeDevice === 'gadgets') {
+      setGadgetsFilter({ ...gadgetsFilter, [parametr]: newValue })
+    }
+    filter()
+  }
+
+
+  const checkValueCheckboxes = (e, parametr, setValueParametr) => {
+    let newValueCheckboxes = parametr
+    let checkedFalse = parametr.indexOf(e.target.name)
+    e.target.checked ? newValueCheckboxes.push(e.target.name) : newValueCheckboxes.splice(checkedFalse, 1) 
+    setValueParametr(newValueCheckboxes)
+    filter()
+  }
 
 
     return (
-      <>
-       <Accordion>
-          <AccordionSummary expandIcon={<ExpandMoreIcon />}>Price (USD)</AccordionSummary>
-          <AccordionDetails>
-              <div className='d-flex justify-content-between'>
-                <span>from {price[0]}</span>
-                <span>to {price[1]}</span>
-              </div>
-                <Slider
-                  value={price}
-                  onChange={filterByPrice}
-                  step={50}
-                  min={100}
-                  max={2000}
-              />
-          </AccordionDetails>
-        </Accordion>
-        
+      <div className='wrapper-filter'>
+        <h2>Filter</h2>
+        {typeDevice === 'smartphones' ?
+          <>
+            <RangeParametr title='Price (USD)' state={phonesFilter}  step={50} min={100} max={2200} parametr='price' filterRange={filterRange}/>
+            <RangeParametr title='Display size(")' state={phonesFilter}  step={0.1} min={4} max={7.2} parametr='display' filterRange={filterRange}/>
 
+            <MemoryParametr title='Internal storage' size={['64', '128', '256']} state={phonesFilter} setState={setPhonesFilter} checkValueCheckboxes={checkValueCheckboxes} parametr={checkboxMemory} setValueParametr={setCheckboxMemory} unit={'Gb'}/>
+            <MemoryParametr title='RAM' size={['4', '6']} state={phonesFilter} setState={setPhonesFilter} checkValueCheckboxes={checkValueCheckboxes} parametr={checkboxRAM} setValueParametr={setCheckboxRAM} unit={'Gb'}/>
+          </>
+          : typeDevice === 'computers' ?
+          <>
+            <RangeParametr title='Price (USD)' state={compFilter} filterRange={filterRange} step={50} min={1000} max={8000} parametr='price' />
+            <RangeParametr title='Display size(")' state={compFilter} filterRange={filterRange} step={0.1} min={10} max={30} parametr='display' />
 
-      <Accordion>
-        <AccordionSummary expandIcon={<ExpandMoreIcon />}>Display size(")</AccordionSummary>
-          <AccordionDetails>
-              <div className='d-flex justify-content-between'>
-                <span>from {valueDisplay[0]}</span>
-                <span>to {valueDisplay[1]}</span>
-              </div>
-                <Slider
-                  value={valueDisplay}
-                  onChange={filterByDisplay}
-                  step={0.1}
-                  min={4}
-                  max={7}
-              />
-        </AccordionDetails>
-        </Accordion>
+            <MemoryParametr title='Internal storage' size={['256', '512', '1024']} state={compFilter} setState={setCompFilter} checkValueCheckboxes={checkValueCheckboxes} parametr={checkboxMemory} setValueParametr={setCheckboxMemory} unit={'Gb'}/>
+            <MemoryParametr title='RAM' size={['8', '16', '32']} state={compFilter} setState={setCompFilter} checkValueCheckboxes={checkValueCheckboxes} parametr={checkboxRAM} setValueParametr={setCheckboxRAM} unit={'Gb'}/>
+          </>
+          : typeDevice === 'gadgets' ?
+          <>
+            <RangeParametr title='Price (USD)' state={gadgetsFilter} filterRange={filterRange} step={1} min={300} max={600} parametr='price' />
+            <MemoryParametr title='Display size(mm)' size={['40', '44']} state={gadgetsFilter} setState={setGadgetsFilter} checkValueCheckboxes={checkValueCheckboxes} parametr={checkboxMemory} setValueParametr={setCheckboxMemory} unit={'mm'}/>
+          </>
+          : ''    
+    }
 
-        
-
-        <Accordion>
-          <AccordionSummary expandIcon={<ExpandMoreIcon />}>Internal storage</AccordionSummary>
-          <AccordionDetails>
-            <div onChange={filterByStorage}>
-              <CheckboxMemory name='64'  />
-              <CheckboxMemory name='128'  />
-              <CheckboxMemory name='256'  />
-            </div>
-          </AccordionDetails>
-        </Accordion>
-
-
-        <Accordion>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}>RAM</AccordionSummary>
-          <AccordionDetails>
-              <div onChange={filterByRAM}>
-                <CheckboxMemory name='6'  />
-                <CheckboxMemory name='4'  />
-              </div>
-          </AccordionDetails>
-        </Accordion>
-        <button onClick={showFilteredList} className='btn btn-info'>Show ({filteredList.length})</button>
-        <button onClick={resetFilter} className='btn btn-danger'>Reset</button>
-      </>
+        <div onClick={resetFilter} className='wrapper-btn-reset-filter'>Reset</div>
+      </div>
     );
 }
 
