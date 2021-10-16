@@ -46,7 +46,7 @@ function Device({ data, device, showAlert }) {
 
     return (
             <div className="col" title='iPhone'>
-            <div className="card" style={{ width: "18rem" }} >
+            <div className="card" style={{ width: "17rem" }} >
                 <div onClick={() => openDevicePage(id)}>
                     <div className='img' style={{ backgroundImage:`url(${img})`}}></div>
                         <div className="card-body">
