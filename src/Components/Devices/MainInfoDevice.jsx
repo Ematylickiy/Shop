@@ -17,8 +17,9 @@ function MainInfoDevice({ data, device }) {
 
     const [textBtnCart, setTextBtnCart] = useState()
     const [textBtnComparison, setTextBtnComparison] = useState()
-    const [visibleAlertWarning, setVisibleAlertWarning] = useState('hide-alert')
-    const [visibleAlertSuccess, setvisibleAlertSuccess] = useState('hide-alert')
+    const [visibleAlertWarning, setVisibleAlertWarning] = useState('hide-alert');
+    const [visibleAlertSuccess, setvisibleAlertSuccess] = useState('hide-alert');
+    const [visibleAlertError, setVisibleAlertError] = useState('hide-alert')
 
 
     useEffect(() => {
@@ -48,6 +49,9 @@ function MainInfoDevice({ data, device }) {
 
     const addProductToCompasion = () => {
         let productTypeBool = stateCompasion.some(device => device.type !== data.type)
+        if (stateCompasion.length > 3) {
+            return showAlert('visible-alert', setVisibleAlertError)
+        }
         if (productTypeBool) {
             return showAlert('visible-alert', setVisibleAlertWarning)
         }
@@ -93,6 +97,9 @@ function MainInfoDevice({ data, device }) {
                 </div>
                 <div className={`${visibleAlertWarning}`}>
                     <Alert variant="filled" severity="warning">You are trying to compare different types of products</Alert>
+                </div>
+                <div className={`${visibleAlertError}`}>
+                    <Alert variant="filled" severity="error">Maximum for comparison - 4!</Alert>
                 </div>
                     
                     <h2>{`${price}.00 $`}</h2>

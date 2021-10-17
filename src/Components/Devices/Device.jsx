@@ -37,7 +37,7 @@ function Device({ data, device, showAlert, setvisibleAlertSuccess, setVisibleAle
     const addProductToCompasion = () => {
         const isInComparison = stateCompasion.some(device => device.name === name);
         let productTypeBool = stateCompasion.some(device => device.type !== data.type)
-        console.log(stateCompasion)
+
         if (stateCompasion.length > 3) {
             return showAlert('visible-alert', setVisibleAlertError)
         }

@@ -1,22 +1,16 @@
-.wrap-basket h1{
-    color: white;
-    text-align: center;
-    margin-top: 100px;
-}
 
-/* .wrap-basket .wrap-img-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-} */
 .wrap-basket .card-body {
     text-align: left;
+}
+
+.wrap-basket .wrap-name-device h1 {
+    color: white;
 }
 
 .wrap-basket .img {
     margin: 3px 20px 9px 19px;
     width: 45px;
-    height: 60px;
+    height: 86px;
 }
 
 .wrap-basket .card {
@@ -49,8 +43,9 @@
 }
 
 .info {
-    margin-top: 70px;
+    color: white;
     text-align: center;
+    margin-top: 100px;
 }
 
 
@@ -86,7 +81,7 @@ tbody{
 }
 
 tr {
-    height: 100px;
+    height: 65px;
 }
 
 thead {
@@ -96,7 +91,7 @@ thead {
 }
 
 td p{
-    margin-top: 37px;
+    margin-top: 52px;
 }
 
 .table .input-group {
@@ -141,4 +136,148 @@ table .card-title {
 
 .table-quantity .btn:first-child:hover {
     color: rgb(219, 27, 1);
+}
+
+
+/* ////////////////////////////////////// modal ////////////// */
+
+.modal-dialog{
+    max-width: 900px;
+}
+
+
+.form-control {
+    width: 100%;
+    margin: 15px 0 10px 0px;
+}
+
+textarea {
+    resize: none;
+}
+
+.wrap-data-delivery {
+    width: 80%;
+    margin: 16px auto;
+}
+
+
+.fields {
+    width: 300px;
+}
+
+
+.wrap-step2 h2{
+    text-align: center;
+    margin: 27px 0;
+}
+
+.wrap-step2 h5 {
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.wrap-step2 h5 span {
+    font-weight: 600;
+}
+
+.wrap-step2 .d-flex {
+    border: 1px #d1d1d1 solid;
+    padding: 20px;
+}
+
+.step2-device {
+    margin: 20px 0;
+    border: 1px #d1d1d1 solid;
+    padding: 20px;
+}
+
+.step2-device h5{
+    font-size: 14px;
+}
+
+.step2-device h5 span {
+    font-size: 20px;
+}
+
+.group-btn-steps{
+    text-align: right;
+}
+.group-btn-steps button {
+    width: 200px;
+    margin-left: 10px;
+}
+
+.wrap-step2 h3{
+    text-align: right;
+    margin: 10px 10px 20px 0;
+    color: #e30000;
+}
+
+.wrap-step3 {
+    width: 84%;
+    margin: 30px auto;
+}
+.wrap-step3 form {
+    width: 250px;
+}
+
+.wrap-step3 form input {
+    width: 100%;
+    margin: 5px 0;
+    padding: 4px 10px;
+    border-radius: 10px;
+    border: 3px solid #ffe0e0;
+    outline: none;
+}
+
+.wrap-step3 form input:focus{
+    border: 3px solid #599fdf;
+}
+
+.wrap-step3 .rccs__card--unknown > div{
+    background: linear-gradient(25deg, #ed3e3e, #599fdf);
+    box-shadow: none;
+}
+
+
+.wrap-step3 .rccs__card--mastercard .rccs__card__background {
+    background: linear-gradient(25deg, #d1d516, #ffffff);
+}
+
+.wrap-step3 .rccs__card--visa .rccs__card__background {
+    background: linear-gradient(266deg, #000000, #770283);
+}
+
+.succedPage  {
+    margin-top: 15px;
+}
+
+.succedPage img {
+    display: block;
+    margin: 0px auto 10px;
+}
+
+
+.modal-body .css-z7uhs0-MuiStepConnector-line {
+    display: block;
+    border-color: #56bbe5;
+    border-top-style: solid;
+    border-top-width: 3px;
+    margin-top: 5px;
+}
+
+
+
+.modal-body .css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed {
+    color: #56bbe5;
+    font-size: 39px;
+}
+
+
+.modal-body .css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-active, .modal-body .css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root {
+    font-size: 39px;
+}
+
+.wrap-step3 .btn{
+    margin: 10px 10px 0 0;
 }

@@ -16,8 +16,8 @@
     background-color: white;
     padding: 27px;
     max-width: 247px;
-    border-radius: 15px;
-    border: 3px solid rgb(0, 165, 187);
+    border-radius: 25px;
+    box-shadow: 0px 0px 25px rgb(17 183 224);
 }
 
 .wrap-page-compare .col h4 {
@@ -61,4 +61,11 @@ hr {
 .wrap-page-compare hr{
     margin-bottom: 27px;
 }
+ .wrap-page-compare  span .css-mf1cb5-MuiButtonBase-root-MuiIconButton-root {
+    color: rgb(195, 248, 250);
+}
 
+
+.wrap-page-compare .col h4 {
+    font-size: 19px;
+}
