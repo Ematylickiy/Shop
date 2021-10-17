@@ -19,16 +19,13 @@ function ModalWindow({show, setShow}) {
         'Payment',
     ];
     
-    const handleSteps = (path) => {
-        path === 'next' ? setStep(step + 1) : setStep(step - 1)
-        setTimeout(() => {
-            if (step === 2) {
-                setShow(false)
-                localStorage.clear();
-                setStep(0)
-                window.location.reload()
-            }
-        }, 2000)
+    const handleSteps = (path) => path === 'next' ? setStep(step + 1) : setStep(step - 1)
+
+    const resetModal = () => {
+        setShow(false)
+        localStorage.clear();
+        setStep(0)
+        window.location.reload()
     }
 
 
@@ -54,8 +51,8 @@ function ModalWindow({show, setShow}) {
                     step === 3 ?
                         <div className='succedPage'>
                             <h1 className='text-center p-4 text-success text-uppercase'>The payment was successful!</h1>
-                            <img src="https://static.tildacdn.com/tild6261-3462-4565-b566-366332323264/__.png" width='200px' alt="" />
-                        </div>   :
+                            <img  onClick={resetModal} src="https://static.tildacdn.com/tild6261-3462-4565-b566-366332323264/__.png" width='200px' alt="" />
+                        </div> :
                     ''    
                         }
                                 

@@ -50,7 +50,7 @@ function Filter({sortDeviceList, typeDevice}) {
         }
       })
       setGadgetsFilter({
-        price: [350, 520],
+        price: [300, 520],
         checkBoxes: {
           40: false,
           44: false
@@ -192,7 +192,7 @@ function Filter({sortDeviceList, typeDevice}) {
           </>
           : typeDevice === 'gadgets' ?
           <>
-            <RangeParametr title='Price (USD)' state={gadgetsFilter} filterRange={filterRange} step={1} min={300} max={600} parametr='price' />
+            <RangeParametr title='Price (USD)' state={gadgetsFilter} filterRange={filterRange} step={1} min={200} max={600} parametr='price' />
             <MemoryParametr title='Display size(mm)' size={['40', '44']} state={gadgetsFilter} setState={setGadgetsFilter} checkValueCheckboxes={checkValueCheckboxes} parametr={checkboxMemory} setValueParametr={setCheckboxMemory} unit={'mm'}/>
           </>
           : ''    

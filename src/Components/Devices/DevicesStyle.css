@@ -7,7 +7,7 @@
 }
 
 .row {
-    margin-top: 16px;
+    margin-top: -5px;
     width: 920px;
 }
 
@@ -92,6 +92,7 @@
 .wrap-name-device h1 {
     font-size: 41px;
     letter-spacing: -1px;
+    font-weight: 300;
 }
 
 .pagePhone .card {
@@ -110,7 +111,7 @@
 
 .content-page-device {
     margin: 0 auto;
-    width: 90%;
+    width: 89%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -129,7 +130,8 @@
 
 .wrap-mainInfo h2 {
     font-size: 5rem;
-    color: #36c3e3;
+    color: #21a1be;
+    font-weight: 300;
 }
 
 .wrap-mainInfo p {

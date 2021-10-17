@@ -46,7 +46,7 @@ function Step3Payment({ handleSteps, step }) {
                     placeholder="Cardholder Name"
                     onChange={(e)=>setDataCard({...dataCard, name: e.target.value})}
                     onFocus={handleInputFocus}
-                    maxlength='22'
+                    maxLength='22'
                 />
                 <input
                     required
@@ -55,7 +55,7 @@ function Step3Payment({ handleSteps, step }) {
                     placeholder="Valid thru"
                     onChange={(e)=>setDataCard({...dataCard, expiry: e.target.value})}
                     onFocus={handleInputFocus}
-                    maxlength='4'
+                    maxLength='4'
                 />
                 <input
                     required
@@ -64,7 +64,7 @@ function Step3Payment({ handleSteps, step }) {
                     placeholder="CVC"
                     onChange={(e)=>setDataCard({...dataCard, cvc: e.target.value})}
                     onFocus={handleInputFocus}
-                    maxlength='3'
+                    maxLength='3'
                 />
                 <button className='btn btn-outline-secondary' variant="primary" onClick={() => handleSteps('back')} disabled={!step ? true : false}>
                     Back

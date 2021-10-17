@@ -38,16 +38,16 @@ function Device({ data, device, showAlert, setvisibleAlertSuccess, setVisibleAle
         const isInComparison = stateCompasion.some(device => device.name === name);
         let productTypeBool = stateCompasion.some(device => device.type !== data.type)
 
-        if (stateCompasion.length > 3) {
-            return showAlert('visible-alert', setVisibleAlertError)
-        }
         if (productTypeBool) {
             return showAlert('visible-alert', setVisibleAlertWarning)
+        }
+        if (stateCompasion.length > 3) {
+            return showAlert('visible-alert', setVisibleAlertError)
         }
         if (isInComparison) {
             dispatch(deleteFromComparison(data))
         } else {
-            dispatch(addToComparison(data))
+            return dispatch(addToComparison(data))
         }
     }
 

@@ -3,10 +3,13 @@ select{
     background: black;
     color: white;
     border: none;
-    font-size: 26px;
+    font-size: 22px;
     outline: none;
     cursor: pointer;
     padding: 10px;
+    opacity: 0.8;
+    transition: 0.2s;
+
 }
 option {
     font-size: 20px;
@@ -16,6 +19,8 @@ option {
 select:hover {
     box-shadow: 0px 0px 10px rgb(17, 183, 224);
     border-radius: 10px;
+    opacity: 1;
+    transition: 0.2s;
   }
 
 
@@ -50,7 +55,7 @@ input::-webkit-inner-spin-button {
 }
 
 .wrapper-filter h2 {
-    background-color: #28545e;
+    background-color: #21a1be;
     padding: 7px 20px;
     letter-spacing: 3px;
     font-weight: bold;
@@ -58,6 +63,7 @@ input::-webkit-inner-spin-button {
     border-radius: 20px 20px 0 0;
     text-align: center;
     text-transform: uppercase;
+    color: #e5e5e5;
 
 }
 

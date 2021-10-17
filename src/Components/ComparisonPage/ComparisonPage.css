@@ -34,15 +34,16 @@
     width: 100%;
 }
 
-.wrap-page-compare  .form-check-label {
+.wrap-page-compare .form-check-label {
     margin-top: 0;
     font-size: 21px;
     margin-bottom: 20px;
+    font-weight: 300;
 }
 
 
 .wrap-page-compare .form-switch .form-check-input{
-    font-size: 21px;
+    font-size: 20px;
     cursor: pointer;
 
 }
