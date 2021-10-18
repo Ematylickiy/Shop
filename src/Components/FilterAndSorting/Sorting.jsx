@@ -28,12 +28,11 @@ function Sorting({data, sortDeviceList}) {
 
 
     return (
-
-            <select value={stateBtnSort} onChange = {(e)=>changeSelectList(e.target.value)}>
-                <option value="DEFAULT" disabled>Sort by</option>
-                <option value="ascending">Price &#9650;</option>
-                <option value="descending">Price &#9660;</option>
-            </select>
+        <select value={stateBtnSort} onChange = {(e)=>changeSelectList(e.target.value)}>
+            <option value="DEFAULT" disabled>Sort by</option>
+            <option value="ascending">Price &#9650;</option>
+            <option value="descending">Price &#9660;</option>
+        </select>
     )
 }
 

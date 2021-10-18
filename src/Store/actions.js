@@ -1,4 +1,4 @@
-import { DELETE_FROM_CART, ADD_TO_CART, ADD_TO_COMPARISON, INCREASE_TOTALPRICE, DECREASE_TOTALPRICE, DELETE_FROM_COMPARISON } from './actionTypes'
+import { DELETE_FROM_CART, ADD_TO_CART, ADD_TO_COMPARISON, INCREASE_TOTALPRICE, DECREASE_TOTALPRICE, DELETE_FROM_COMPARISON, DELETE_ALL_FROM_COMPARISON } from './actionTypes'
 
 
 export function deleteFromCart(device, amount) {
@@ -13,6 +13,11 @@ export function deleteFromComparison(device) {
     return { 
         type: DELETE_FROM_COMPARISON,
         payload: device,
+    };
+}
+export function deleteAllFromComparison() {
+    return { 
+        type: DELETE_ALL_FROM_COMPARISON,
     };
 }
 

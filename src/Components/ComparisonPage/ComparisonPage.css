@@ -1,7 +1,12 @@
 .wrap-page-compare{
-    margin-top: 40px;
     color: rgb(255, 255, 255);
     text-align: center;
+}
+
+.delete-all-btn {
+    display: block;
+    margin: 34px auto 0px;
+    width: 120px;
 }
 
 .wrap-page-compare .image-device{

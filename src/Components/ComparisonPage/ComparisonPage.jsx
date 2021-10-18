@@ -4,7 +4,7 @@ import Parametr from './Parametr'
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import './ComparisonPage.css'
-import { deleteFromComparison } from '../../Store/actions';
+import { deleteAllFromComparison, deleteFromComparison } from '../../Store/actions';
 import { useHistory } from 'react-router'
 
 
@@ -57,9 +57,12 @@ function ComparisonPage() {
         hideOrShowUniqueParams()
     }
 
+    const deleteAll = () => dispatch(deleteAllFromComparison())
+
 
     return (
         <>
+            {state.length ? <button className='btn btn-danger delete-all-btn' onClick={deleteAll}>Delete all</button> : ''}
             {state.length > 1 ?
                 <div className='wrap-page-compare'>
             <div className="container">
@@ -68,7 +71,6 @@ function ComparisonPage() {
                 <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" onChange={hideOrShowUniqueParams} checked={select} />
                 <label className="form-check-label" htmlFor="flexSwitchCheckChecked">Hide identical parameters</label>
             </div>
-
                 <div className="row">
                     {state.map(device => (
                         <div className='col' key={device.id.toString()}>

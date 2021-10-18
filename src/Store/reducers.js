@@ -1,4 +1,4 @@
-import { ADD_TO_CART, DELETE_FROM_CART, ADD_TO_COMPARISON, INCREASE_TOTALPRICE, DECREASE_TOTALPRICE, DELETE_FROM_COMPARISON } from "./actionTypes";
+import { ADD_TO_CART, DELETE_FROM_CART, ADD_TO_COMPARISON, INCREASE_TOTALPRICE, DECREASE_TOTALPRICE, DELETE_FROM_COMPARISON, DELETE_ALL_FROM_COMPARISON } from "./actionTypes";
 
 const initialState = {
     cart: [],
@@ -30,6 +30,11 @@ function reducer(state = initialState, action) {
             return {
                 ...state,
                 comparison: state.comparison.filter(item => item.name !== action.payload.name),
+            };
+        case DELETE_ALL_FROM_COMPARISON:
+            return {
+                ...state,
+                comparison: [],
             };
         case INCREASE_TOTALPRICE:
             let updateProductIncr = state.cart.find(item => item.name === action.payload.name)

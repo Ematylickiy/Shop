@@ -1,3 +1,7 @@
+*{
+    font-family: 'Roboto Slab', serif;
+}
+
 .img-slider{
     height: 500px;
     margin: 0 auto;
