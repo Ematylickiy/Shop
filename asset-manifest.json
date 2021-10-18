@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Shop/static/css/main.278dd0df.chunk.css",
-    "main.js": "/Shop/static/js/main.1377d111.chunk.js",
-    "main.js.map": "/Shop/static/js/main.1377d111.chunk.js.map",
+    "main.css": "/Shop/static/css/main.78acc0dc.chunk.css",
+    "main.js": "/Shop/static/js/main.b05b8b61.chunk.js",
+    "main.js.map": "/Shop/static/js/main.b05b8b61.chunk.js.map",
     "runtime-main.js": "/Shop/static/js/runtime-main.c49ced17.js",
     "runtime-main.js.map": "/Shop/static/js/runtime-main.c49ced17.js.map",
     "static/css/2.727685ba.chunk.css": "/Shop/static/css/2.727685ba.chunk.css",
@@ -10,7 +10,7 @@
     "static/js/2.6beb8930.chunk.js.map": "/Shop/static/js/2.6beb8930.chunk.js.map",
     "index.html": "/Shop/index.html",
     "static/css/2.727685ba.chunk.css.map": "/Shop/static/css/2.727685ba.chunk.css.map",
-    "static/css/main.278dd0df.chunk.css.map": "/Shop/static/css/main.278dd0df.chunk.css.map",
+    "static/css/main.78acc0dc.chunk.css.map": "/Shop/static/css/main.78acc0dc.chunk.css.map",
     "static/js/2.6beb8930.chunk.js.LICENSE.txt": "/Shop/static/js/2.6beb8930.chunk.js.LICENSE.txt",
     "static/media/Slider.css": "/Shop/static/media/watchTest.b4934e65.png",
     "static/media/Navbar.css": "/Shop/static/media/logo.18080bff.png"
@@ -19,7 +19,7 @@
     "static/js/runtime-main.c49ced17.js",
     "static/css/2.727685ba.chunk.css",
     "static/js/2.6beb8930.chunk.js",
-    "static/css/main.278dd0df.chunk.css",
-    "static/js/main.1377d111.chunk.js"
+    "static/css/main.78acc0dc.chunk.css",
+    "static/js/main.b05b8b61.chunk.js"
   ]
 }
