@@ -7,12 +7,14 @@ import ModalWindow from './ModalOrder/ModalWindow';
 
 function CartPageList() {
 
-    const state = useSelector(state => state.cart)
-    const totalPrice = useSelector(state => state.totalPrice)
+    const state = useSelector(state => state.cart);
+    const totalPrice = useSelector(state => state.totalPrice);
     const [showModal, setShowModal] = useState(false);
 
     const handleShow = () => setShowModal(true);
 
+    const headersTables = ['List of goods', 'Price', 'Quantity', 'Amount'];
+    
     return (
         <div className='wrap-basket container'>
             {state.length > 0 ?
@@ -22,23 +24,22 @@ function CartPageList() {
                         <table className="table">
                             <thead>
                                 <tr>
-                                <th scope="col">List of goods</th>
-                                <th scope="col">Price</th>
-                                <th scope="col">Quantity</th>
-                                <th scope="col">Amount</th>
+                                    {headersTables.map(header=><th scope="col">{header}</th>)}
                                 </tr>
                             </thead>
+                            
                             <tbody>
                                 {state.map(device => (
                                     <ProductInCard device={device} key={device.name}/>
                                 ))}
                             </tbody>
                         </table>
+                        
                         <div className='wrap-order-info'>
                             <h2>Total price: {totalPrice}.00$</h2>
-
                             <button className='btn btn-outline-info' onClick={handleShow}>Buy now</button>
                         </div>
+                    
                     </div>
                 </div>
                 :

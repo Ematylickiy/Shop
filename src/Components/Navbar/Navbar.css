@@ -41,14 +41,15 @@ body {
 
 
 .btn .badge {
-    top: -10px;
-    left: -28px;
-    background-color: #045e7e;
+    top: -1px;
+    left: -35px;
+    background-color: #21a1be;
+    font-size: 14px;
 }
 
 .btn .position-compare {
-    top: -19px;
-    left: -15px;
+    top: -15px;
+    left: -40px;
 }
 /* //////////////////////////////////////NavLink///////////////////////////////////////////// */
 
@@ -77,7 +78,7 @@ body {
 }
 
 .wrapper-totalPrice {
-    min-width: 280px;
+    min-width: 309px;
     font-size: 20px;
 }
 

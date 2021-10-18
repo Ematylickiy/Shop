@@ -6,17 +6,14 @@ import {decreaseTotalPrice, increaseTotalPrice} from '../../Store/actions'
 
 
 function ProductInCard({ device }) {
-
+    const { img, name, price } = device;
     
-    let state = useSelector(state => state.cart)
-    const { img, name, price} = device
-    state = state.filter(item => item.name === name)[0]
-    const [amount, setAmount] = useState(price * state.count)
-    
+    let state = useSelector(state => state.cart);
+    state = state.filter(item => item.name === name)[0];
+    const [amount, setAmount] = useState(price * state.count);
+    const [totalQuantityDevice, setTotalQuantityDevice] = useState(state.count);
 
-    const [totalQuantityDevice, setTotalQuantityDevice] = useState(state.count)
-
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
 
     const removeFromCart = () => {
         dispatch(deleteFromCart(device, amount))
@@ -40,7 +37,6 @@ function ProductInCard({ device }) {
     }
 
     return (
-
         <tr>
             <td className='table-product'>
                 <div>
@@ -66,7 +62,7 @@ function ProductInCard({ device }) {
                         />
                         <button className="btn btn-sm form-control-sm" type="button" onClick={addQuantity}>+</button>
                     </div>
-                    </div>
+                </div>
             </td>
 
             <td className='table-amount'><p>{amount}.00$</p></td>

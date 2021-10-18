@@ -8,7 +8,6 @@ function Step2Checking({ handleSteps, step }) {
     const state = useSelector(state => state.cart)
     const totalPrice = useSelector(state => state.totalPrice)
 
-    
     return (
         <div className = 'wrap-step2'>
             <h2>Check your purchase details!</h2>

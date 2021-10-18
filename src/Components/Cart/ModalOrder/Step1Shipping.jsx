@@ -7,9 +7,7 @@ import FieldInput from './FieldInput'
 function Step1Shipping({ handleSteps, step}) {
     
 
-    const namesFiledForm = [...fieldCustomer.map(field => field.name), ...fieldDelivery.map(field => field.name)]
-
-
+    const namesFiledForm = [...fieldCustomer.map(field => field.name), ...fieldDelivery.map(field => field.name)];
 
     const handleForm = (event) => {
         event.preventDefault()
