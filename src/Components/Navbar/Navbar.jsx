@@ -25,7 +25,7 @@ function Navbar() {
         <>
             <nav className="navbar navbar-light">
                 <div className="container-fluid">
-                    <div className='logo'></div>
+                    <div onClick={()=>handleAddress('')} className='logo'></div>
 
                     <SearchPanel/>
 

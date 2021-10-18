@@ -213,3 +213,8 @@ textarea {
     border-width: 2px;
     font-weight: 700;
 }
+
+
+.modal-body .css-qivjh0-MuiStepLabel-label.MuiStepLabel-alternativeLabel{
+    color: #d8feff;
+}

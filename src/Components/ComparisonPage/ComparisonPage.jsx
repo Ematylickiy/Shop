@@ -5,10 +5,13 @@ import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import './ComparisonPage.css'
 import { deleteFromComparison } from '../../Store/actions';
+import { useHistory } from 'react-router'
+
 
 function ComparisonPage() {
 
     const [select, setSelect] = useState(false)
+    let history = useHistory()
     
     const state = useSelector(state => state.comparison)
     const dispatch = useDispatch()
@@ -78,7 +81,7 @@ function ComparisonPage() {
                                 </span>
                             </h4>
                             
-                            <div className='wrap-image'>
+                            <div className='wrap-image' onClick={() => history.push(`/${device.type}/${device.id}`)}>
                                 <div className='image-device' style={{ backgroundImage: `url(${device.img})` }}></div>
                             </div>
                             <h4>{device.price}.00$</h4>
