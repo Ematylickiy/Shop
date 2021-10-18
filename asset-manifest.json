@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Shop/static/css/main.f8609a72.chunk.css",
+    "main.js": "/Shop/static/js/main.983b8008.chunk.js",
+    "main.js.map": "/Shop/static/js/main.983b8008.chunk.js.map",
+    "runtime-main.js": "/Shop/static/js/runtime-main.c49ced17.js",
+    "runtime-main.js.map": "/Shop/static/js/runtime-main.c49ced17.js.map",
+    "static/css/2.727685ba.chunk.css": "/Shop/static/css/2.727685ba.chunk.css",
+    "static/js/2.c067759d.chunk.js": "/Shop/static/js/2.c067759d.chunk.js",
+    "static/js/2.c067759d.chunk.js.map": "/Shop/static/js/2.c067759d.chunk.js.map",
+    "index.html": "/Shop/index.html",
+    "static/css/2.727685ba.chunk.css.map": "/Shop/static/css/2.727685ba.chunk.css.map",
+    "static/css/main.f8609a72.chunk.css.map": "/Shop/static/css/main.f8609a72.chunk.css.map",
+    "static/js/2.c067759d.chunk.js.LICENSE.txt": "/Shop/static/js/2.c067759d.chunk.js.LICENSE.txt",
+    "static/media/Slider.css": "/Shop/static/media/watchTest.b4934e65.png",
+    "static/media/Navbar.css": "/Shop/static/media/logo.18080bff.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c49ced17.js",
+    "static/css/2.727685ba.chunk.css",
+    "static/js/2.c067759d.chunk.js",
+    "static/css/main.f8609a72.chunk.css",
+    "static/js/main.983b8008.chunk.js"
+  ]
+}
