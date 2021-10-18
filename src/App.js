@@ -11,7 +11,7 @@ import CartPageList from "./Components/Cart/CartPageList";
 function App() {
 
   return (
-    <Router>
+    <Router basename="/Shop">
           <Navbar />
       <Switch>
         <Route exact path="/"><Slider /></Route>
