@@ -70,7 +70,7 @@ function Device({ data, device, showAlert, setvisibleAlertSuccess, setVisibleAle
 
     return (
             <div className="col" title='iPhone'>
-            <div className="card" style={{ width: "17rem" }} >
+            <div className="card" >
                 <div onClick={() => openDevicePage(id)}>
                     <div className='img' style={{ backgroundImage:`url(${img})`}}></div>
                         <div className="card-body">

@@ -37,7 +37,7 @@ function DevicesList({typeDevice}) {
 
 
     return (
-        <div className="container d-flex justify-content-between align-items-start">
+        <div className="container d-flex justify-content-between align-items-start deviceList">
             <div>
                 <Sorting data={data} sortDeviceList={sortDeviceList} />
                 <div className="row">

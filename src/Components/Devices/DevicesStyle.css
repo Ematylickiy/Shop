@@ -44,6 +44,10 @@
 
 }
 
+.deviceList .row .col .card {
+    width: 17rem
+}
+
 
 .btn-basket{
     border: none;
@@ -328,5 +332,299 @@
 
 .col .card .scales .badge {
     left: 22px;
+}
+
+
+@media (max-width: 1382px) {
+    .container {
+        max-width: 1356px;
+    }
+}
+
+@media (max-width: 1255px) {
+    .deviceList .row .col .card {
+        width: 16rem
+    }
+    .deviceList .row {
+        width: 844px;
+    }
+}
+
+@media (max-width: 1185px) {
+    .deviceList .wrapper-filter {
+        width: 261px;
+    }
+}
+@media (max-width: 1167px) {
+    .deviceList .row {
+        max-width: 811px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .deviceList .row {
+        max-width: 665px;
+    }
+}
+
+@media (max-width: 970px) {
+    .deviceList .row {
+        max-width: 578px;
+    }
+    .wrap-mainInfo h2 {
+        font-size: 4rem;
+    }
+    .wrap-mainInfo .btn {
+        margin-bottom: 14px;
+        width: 277px;
+        font-size: 18px;
+        margin-right: 10px;
+    }
+}
+
+
+@media (max-width: 872px) {
+    .deviceList .row .col .card {
+        width: 15rem;
+    }
+    .deviceList .wrapper-filter {
+        width: 226px;
+    }
+    .wrap-mainInfo {
+        min-width: 289px;
+    }
+    .parametrs h4{
+        font-size: 18px;
+    }
+    .parametrs .logo-describe {
+        height: 42px;
+    }
+    .parametrs h6 {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 830px) {
+    .deviceList .row {
+        max-width: 530px;
+    }
+    .pagePhone .card {
+        padding: 17px;
+    }
+    .wrap-name-device h1 {
+        font-size: 34px;
+    }
+    .wrap-name-device span {
+        width: 53px;
+        height: 34px;
+    }
+}
+
+@media (max-width: 785px) {
+    .deviceList .row {
+        max-width: 352px;
+    }
+    .deviceList .row .col .card {
+        width: 17rem;
+    }
+    .deviceList .wrapper-filter {
+        width: 294px;
+    }
+    .container {
+        max-width: 729px;
+    }    
+}
+
+@media (max-width: 680px) {
+    .deviceList .wrapper-filter {
+        width: 215px;
+    } 
+    .wrap-mainInfo h2 {
+        font-size: 3rem;
+    }
+    .wrap-mainInfo p {
+        font-size: 14px;
+    }
+    .content-page-device .d-flex {
+        width: 219px;
+    }
+    .logo-delivery {
+        height: 29px;
+    }
+    .wrap-mainInfo .btn {
+        width: 222px;
+        font-size: 14px;
+    }
+    .pagePhone .card div {
+        height: 202px;
+    }
+    .wrap-mainInfo {
+        min-width: 231px;
+    }
+    .parametrs .logo-describe {
+        height: 32px;
+    }
+    .parametrs h4 {
+        font-size: 15px;
+    }
+    .parametrs h6 {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 570px) {
+    .deviceList .row .col .card {
+        width: 15rem;
+    }
+    .deviceList .row {
+        max-width: 325px;
+    }
+    .parametrs h4 {
+        font-size: 25px;
+    }
+    .parametrs h6 {
+        font-size: 18px;
+    }
+    .parametrs .logo-describe {
+        height: 55px;
+    }
+    .parametrs .col {
+        padding: 0px 24px 0 33px;
+    }
+    .pagePhone .container .col {
+        border-left: 1px solid;
+        border-right: 1px solid;
+    }
+    
+}
+
+@media (max-width: 540px){
+    .deviceList .row {
+        max-width: 266px;
+    }
+    .parametrs h4 {
+        font-size: 20px;
+    }
+    .parametrs h6 {
+        font-size: 13px;
+    }
+    .wrap-name-device h1 {
+        font-size: 29px;
+    }
+
+    .wrap-name-device span {
+        width: 40px;
+        height: 29px;
+    }
+    .wrap-mainInfo h2 {
+        font-size: 2rem;
+    }
+    .wrap-mainInfo p {
+        font-size: 11px;
+    }
+    .content-page-device .d-flex {
+        width: 171px;
+    }
+    .logo-delivery {
+        height: 19px;
+    }
+    .wrap-mainInfo .btn {
+        width: 172px;
+        font-size: 12px;
+    }
+    .pagePhone .card div {
+        height: 145px;
+    }
+    .wrap-mainInfo {
+        min-width: 180px;
+    }
+}
+
+
+
+@media (max-width: 510px){
+    .container, .d-flex, .justify-content-between, .align-items-start, .deviceList{
+        display: block !important
+    }
+    .deviceList .row {
+        max-width: 100%;
+        margin: 0;
+    }
+    .deviceList .row .col .card {
+        width: 17rem;
+        
+    }
+    .deviceList .wrapper-filter {
+        width: 215px;
+        margin: 0 auto;
+    }
+    .logo-delivery {
+        display: none;
+    }
+    .parametrs h4 {
+        font-size: 14px;
+    }
+    .parametrs h6 {
+        font-size: 10px;
+    }
+    .parametrs .logo-describe {
+        height: 33px;
+    }
+    .wrap-mainInfo h2 {
+        font-size: 25px;
+    }
+    .wrap-mainInfo .btn {
+        width: 135px;
+        font-size: 9px;
+    }
+    .wrap-mainInfo {
+        margin-top: 44px;
+    }
+}
+
+@media (max-width: 410px){
+    .wrap-mainInfo {
+        min-width: 162px;
+    }
+    .pagePhone .card div {
+        height: 91px;
+    }
+    .content-page-device {
+        margin: 0 auto;
+        width: 100%;
+    }
+    .wrap-name-device {
+        padding: 0px;
+    }
+    .wrap-name-device h1 {
+        font-size: 22px;
+    }
+    .wrap-name-device span {
+        width: 32px;
+        height: 20px;
+    }
+    .pagePhone .container {
+        margin-top: 26px;
+    }
+}
+
+@media (max-width: 385px){
+    .pagePhone .container .col {
+        border: 1px solid;
+    }
+}
+
+@media (max-width: 355px){
+    .deviceList .row .col .card {
+        width: 15rem;
+        margin: 10px auto
+    }
+    .parametrs .logo-describe {
+        height: 24px;
+    }
+    .wrap-mainInfo .btn {
+        margin-bottom: 6px;
+        margin-right: 2px;
+    }
 }
 

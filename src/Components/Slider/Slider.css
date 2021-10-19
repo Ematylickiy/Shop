@@ -6,6 +6,8 @@
     height: 500px;
     margin: 0 auto;
     cursor: pointer;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .mac-img {
@@ -13,23 +15,52 @@
 }
 .imac-test {
     background-image: url('./imgagesSlider/imacTest.png');
-    background-size: 100%;
-    background-repeat: no-repeat;
 }
 
 .watchTest{
     background-image: url('./imgagesSlider/watchTest.png');
-    background-size: 100%;
-    background-repeat: no-repeat;
 }
 .iphone{
     background-image: url('./imgagesSlider/iphone.png');
-    background-size: 100%;
-    background-repeat: no-repeat;
 }
-
 .airpods {
     background-image: url('./imgagesSlider/airpods.png');
-    background-size: 100%;
-    background-repeat: no-repeat;
+}
+
+
+@media (max-width: 1235px) {
+    .img-slider {
+        height: 413px;
+    }
+}
+@media (max-width: 1075px) {
+    .img-slider {
+        height: 355px;
+    }
+}
+@media (max-width: 860px) {
+    .img-slider {
+        height: 281px;
+    }
+}
+@media (max-width: 675px) {
+    .img-slider {
+        height: 239px;
+    }
+}
+@media (max-width: 530px) {
+    .img-slider {
+        height: 221px;
+    }
+}
+@media (max-width: 445px) {
+    .img-slider {
+        height: 174px;
+    }
+}
+
+@media (max-width: 350px) {
+    .img-slider {
+        height: 150px;
+    }
 }

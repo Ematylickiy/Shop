@@ -11,7 +11,7 @@ function Parametrs({ data }) {
         [['camera', camera], ['CPU', CPU], ['RAM', RAM], ['battery', battery]]
     
     return (
-        <div className='container text-center'>
+        <div className='container text-center parametrs'>
             <div className="row">
                 <div className="col">
                     <h4>Screen diagonal</h4>

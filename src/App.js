@@ -1,7 +1,7 @@
 import Slider from "./Components/Slider/Slider"
 import Navbar from "./Components/Navbar/Navbar";
 import React from "react";
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import {HashRouter as Router, Switch, Route} from "react-router-dom";
 import ComparisonPage from "./Components/ComparisonPage/ComparisonPage";
 import DevicesList from "./Components/Devices/DevicesList";
 import TemplatePageDevice from "./Components/Devices/TemplatePageDevice";

@@ -36,7 +36,7 @@ function Slider() {
         <Carousel>
 
             {localImagesSlider.map(step => (
-                <Carousel.Item interval={3000} key={step.img}>
+                <Carousel.Item interval={2000} key={step.img}>
                     <div className={`d-block img-slider w-100 ${step.img}`} onClick={()=>handlePath(step.link)}></div>
                 </Carousel.Item>
             ))}
