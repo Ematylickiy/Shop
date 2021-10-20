@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Parametr from './Parametr'
-import IconButton from '@mui/material/IconButton';
-import DeleteIcon from '@mui/icons-material/Delete';
 import './ComparisonPage.css'
 import { deleteAllFromComparison, deleteFromComparison } from '../../Store/actions';
 import { useHistory } from 'react-router'
@@ -76,11 +74,7 @@ function ComparisonPage() {
                         <div className='col' key={device.id.toString()}>
 
                             <h4>{device.name}
-                                <span onClick={()=>removeFromComparison(device)}>
-                                    <IconButton aria-label="delete" size="large">
-                                        <DeleteIcon />
-                                    </IconButton>
-                                </span>
+                                <span className='delete-from-comparison' onClick={()=>removeFromComparison(device)}>&#10060;</span>
                             </h4>
                             
                             <div className='wrap-image' onClick={() => history.push(`/${device.type}/${device.id}`)}>

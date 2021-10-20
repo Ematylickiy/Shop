@@ -144,4 +144,134 @@ table .card-title {
 }
 
 
+@media (max-width: 1195px){
+    .wrap-order-info {
+        height: 211px;
+        width: 283px;
+    }
+    .table {
+        width: 68%;
+    }
+}
+
+@media (max-width: 1115px){
+    .table-price, .table-quantity, .table-amount {
+        width: 18%;
+    }
+}
+
+@media (max-width: 1075px){
+    .table-price, .table-quantity, .table-amount {
+        width: 20%;
+    }
+}
+
+@media (max-width: 1016px){
+    .wrap-order-info h2 {
+        font-size: 24px;
+    }
+    .wrap-order-info {
+        width: 250px;
+        height: 200px;
+    }
+    .wrap-order-info .btn {
+        border-radius: 17px;
+        padding: 9px;
+        font-size: 16px;
+        width: 54%;
+    }
+    .table {
+        font-size: 12px;
+        width: 62%;
+    }
+    table .card-title {
+        font-size: 14px;
+    }
+    .form-control, .text-center, .form-control-qty{
+        font-size: 13px;
+    }
+    tr{
+        font-size: 17px;
+    }
+    td p {
+        margin-top: 52px;
+        font-size: 13px;
+    }
+    .wrap-cart{
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 930px){
+    .table {
+        font-size: 12px;
+        width: 89%;
+        margin: 0 auto;
+    }
+    .wrap-order-info {
+        width: 340px;
+        height: 200px;
+        margin: 0 auto;
+    }
+    .wrap-order-info h2 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 720px){
+    .wrap-order-info {
+        width: 277px;
+    }
+    .wrap-order-info h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 695px){
+    .table-price, .table-quantity, .table-amount {
+        width: 22%;
+    }
+}
+
+@media (max-width: 645px){
+    .table {
+        width: 100%;
+    }
+    .table-price, .table-quantity, .table-amount {
+        width: 24%;
+    }
+}
+
+@media (max-width: 525px){
+    .table .input-group {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px){
+    table .card-title {
+        font-size: 10px;
+    }
+    tr {
+        font-size: 13px;
+    }
+    td p {
+        margin-top: 52px;
+        font-size: 11px;
+    }
+    .form-control, .text-center, .form-control-qty {
+        font-size: 11px;
+        padding: 1px;
+    }
+}
+
+@media (max-width: 400px){
+    .table-price, .table-quantity, .table-amount {
+        width: 46%;
+    }
+    .wrap-basket .img {
+        width: 31px;
+    }
+}
+
 

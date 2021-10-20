@@ -543,7 +543,7 @@
 
 
 @media (max-width: 510px){
-    .container, .d-flex, .justify-content-between, .align-items-start, .deviceList{
+    .container, .justify-content-between, .align-items-start, .deviceList{
         display: block !important
     }
     .deviceList .row {

@@ -19,12 +19,12 @@ function CartPageList() {
         <div className='wrap-basket container'>
             {state.length > 0 ?
                 <div>
-                    <div className='wrap-name-device'><h1>BASKET</h1></div>
-                    <div className='d-flex'>
+                    <div className='wrap-name-device'><h1>YOUR CART</h1></div>
+                    <div className='d-flex wrap-cart'>
                         <table className="table">
                             <thead>
                                 <tr>
-                                    {headersTables.map(header=><th scope="col">{header}</th>)}
+                                    {headersTables.map(header=><th scope="col" key={header}>{header}</th>)}
                                 </tr>
                             </thead>
                             
