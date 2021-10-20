@@ -26,10 +26,8 @@ function DevicesList({typeDevice}) {
     }, [typeDevice]);
     
 
-
     const sortDeviceList = (newData) => setData(newData)
     
-
     const showAlert = (parametr, setState) => {
         setState(parametr)
         setTimeout(()=>setState('hide-alert'), 1500)

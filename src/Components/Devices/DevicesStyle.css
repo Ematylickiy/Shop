@@ -256,18 +256,19 @@
 
 /* /////////////////////////////////////////////////////////////
  */
-
- .test {
-    background-image: url('../../icons/plus.png');
+.btn-add-cart-compare {
     width: 29px;
     height: 29px;
     background-size: contain;
     background-repeat: no-repeat; 
     background-position: center;
-
 }
 
- .test_2 {
+ .plus {
+    background-image: url('../../icons/plus.png');
+}
+
+ .check {
     background-image: url('../../icons/check.png');
     width: 29px;
     height: 29px;
